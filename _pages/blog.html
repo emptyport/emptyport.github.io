@@ -8,12 +8,13 @@ permalink: "/blog/"
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="/css/blog.css">
 	<script src="/js/blog.js"></script>
+	<script src="https://use.fontawesome.com/224e7fbd5e.js"></script>
 	<title>My Blog</title>
 </head>
 <body>
-	<header>
-		{% include header.html %}
-	</header>
+	<div class="my-nav">
+		<a href="/"><i class="fa fa-home fa-2x"></i></a>
+	</div>
 	<div class="container">
 		{% for post in site.posts %}
 			<article>
@@ -23,8 +24,6 @@ permalink: "/blog/"
 			</article>
 		{% endfor %}
 	</div>
-	<footer>
-		{% include footer.html %}
-	</footer>
+	
 </body>
 </html>

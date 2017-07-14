@@ -6,12 +6,13 @@
 <head>
 	<link rel="stylesheet" href="/css/blog.css">
 	<script src="/js/blog.js"></script>
+	<script src="https://use.fontawesome.com/224e7fbd5e.js"></script>
 	<title>My Blog</title>
 </head>
 <body>
-	<header>
-		{% include header.html %}
-	</header>
+	<div class="my-nav">
+		<a href="/blog"><i class="fa fa-arrow-left fa-2x"></i></a>
+	</div>
 	<div class="container">
 		<article>
 			<h1><a href="{{ site.base_url }}{{ page.url }}">{{ page.title }}</a></h1>
@@ -19,8 +20,5 @@
 			<p>{{ content }}</p>
 		</article>
 	</div>
-	<footer>
-		{% include footer.html %}
-	</footer>
 </body>
 </html>
