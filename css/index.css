@@ -7,7 +7,7 @@ html body {
 }
 
 .container {
-  margin-top: 10%;
+  margin-top: 5%;
   padding: 0;
 }
 
@@ -43,6 +43,12 @@ html body {
   opacity: 0;
   animation: fadeIn 1s forwards;
   animation-delay: 0.3s;
+}
+
+.list-item-five {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.4s;
 }
 
 .list-item a {

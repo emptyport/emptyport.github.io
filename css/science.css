@@ -1,0 +1,15 @@
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to {opacity: 1; }
+}
+
+.scorpion-container {
+  background-color: black;
+}
+
+.scorpion {
+  transition-timing-function: linear;
+  transition-delay: 3s;
+  opacity: 0;
+  animation: fadeIn 5s forwards;
+}
