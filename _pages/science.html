@@ -1,10 +1,32 @@
 ---
 permalink: "/science/"
 ---
+<html>
 
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/science.css">
+  <header>
+    {% include science-header.html %}
+  </header>
 
-<div class='scorpion-container'>
-  <img class='img img-responsive scorpion' src='/images/scorpion.jpeg'/>
-</div>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a page-section="overview" href='#'>Overview</a></li>
+            <li><a page-section="scorpion" href='/science/scorpions'>Scorpion Fluorescence</a></li>
+            <li><a page-section="mass-spec" href="/science/mass-spec">Mass Spectrometry</a></li>
+            <li><a page-section="page3" href="#">Page 3</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </body>
+</html>

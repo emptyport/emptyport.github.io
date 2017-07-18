@@ -18,7 +18,13 @@ html body {
 
 .list-item {
   margin-top: 20px;
-  font-size: 1em;
+  font-size: 4vw;
+}
+
+@media screen and (min-width: 700px) {
+  .list-item {
+    font-size: 1em;
+  }
 }
 
 .list-item-one {
