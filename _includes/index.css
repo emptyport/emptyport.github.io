@@ -23,6 +23,26 @@ html body {
   font-size: 4vw;
 }
 
+.icon-user {
+  font-size: 50px;
+}
+
+.icon-flask {
+  font-size: 50px;
+}
+
+.icon-laptop {
+  font-size: 50px;
+}
+
+.icon-camera {
+  font-size: 50px;
+}
+
+.icon-book {
+  font-size: 50px;
+}
+
 @media screen and (min-width: 700px) {
   .list-item {
     font-size: 1em;
