@@ -1,8 +1,17 @@
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/science.css">
-<script
-			  src="https://code.jquery.com/jquery-3.2.1.min.js"
-			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-			  crossorigin="anonymous"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/science.js"></script>
+{% include icons.html %}
+<style>
+  {% include css/science.css %}
+</style>
+
+<script>
+  {% include js/science.js %}
+</script>
+
+<div class="topnav" id="myTopnav">
+  <a href="/"><svg class="icon icon-home"><use xlink:href="#icon-home"></use></svg></a>
+  <a href="/science">Overview</a>
+  <a href="/science/scorpions">Scorpion Fluorescence</a>
+  <a href="/science/entomology">Entomology</a>
+  <a href="/science/mass-spec">Mass Spectrometry</a>
+  <a href="javascript:void(0);" class="nav-icon" onclick="adjustNav()">&#9776;</a>
+</div>
