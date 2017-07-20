@@ -1,5 +1,32 @@
 ---
 permalink: "/about/"
 ---
+<html>
 
-About
+  <head>
+    <title>About</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  {% include icons.html %}
+  {% include fonts.html %}
+  
+  <style>
+    {% include css/about.css %}
+  </style>
+
+  <body>
+    <a href="/"><svg class="icon icon-home"><use xlink:href="#icon-home"></use></svg></a>
+    <img src="/images/profile.jpg"/>
+    <h1>About</h1>
+    <p>
+      I am a husband, father, biochemist, entomologist, developer, photographer, and tinkerer.
+    </p>
+    <p>
+      This website is meant as a more informal resume and a place for me to share some of my projects. For a more formal look at me, feel free to take a look on <a href="https://www.linkedin.com/in/mtporter/">LinkedIn</a>.
+    </p>
+    
+  </body>
+
+</html>
