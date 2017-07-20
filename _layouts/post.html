@@ -7,11 +7,16 @@
 	<link rel="stylesheet" href="/css/blog.css">
 	<script src="/js/blog.js"></script>
 	<script src="https://use.fontawesome.com/224e7fbd5e.js"></script>
-	<title>My Blog</title>
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+	<title>Blog</title>
 </head>
+
+{% include icons.html %}
+{% include fonts.html %}
+
 <body>
 	<div class="my-nav">
-		<a href="/blog"><i class="fa fa-arrow-left fa-2x"></i></a>
+		<a href="/"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></a>
 	</div>
 	<div class="container">
 		<article>

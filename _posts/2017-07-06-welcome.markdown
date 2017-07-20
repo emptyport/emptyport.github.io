@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Welcome!"
+date:   2017-07-20 13:27:00 -0500
+categories: introduction
+---
+This blog is where I'll be sharing the occasional tutorial, interesting finding, project, or rant about something unimportant. For now it's pretty empty, but be sure to check back in the future!

@@ -8,12 +8,16 @@ permalink: "/blog/"
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="/css/blog.css">
 	<script src="/js/blog.js"></script>
-	<script src="https://use.fontawesome.com/224e7fbd5e.js"></script>
-	<title>My Blog</title>
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+	<title>Blog</title>
 </head>
+
+{% include icons.html %}
+{% include fonts.html %}
+
 <body>
 	<div class="my-nav">
-		<a href="/"><i class="fa fa-home fa-2x"></i></a>
+		<a href="/"><svg class="icon icon-home"><use xlink:href="#icon-home"></use></svg></a>
 	</div>
 	<div class="container">
 		{% for post in site.posts %}

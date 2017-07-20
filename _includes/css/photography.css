@@ -1,0 +1,11 @@
+html, body {
+  background-color: #f2f2f2;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin-bottom: 5px;
+}
