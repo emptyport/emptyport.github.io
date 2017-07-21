@@ -13,10 +13,10 @@ For a few days I just put up with it and waited until I got home to install new 
 
 To solve my connection issue, I created the following file ```/etc/apt/apt.conf``` and added the following lines to it:
 ```
-Acquire::http::proxy "http://user:pass@{{server}}:{{port}}";
-Acquire::https::proxy "http://user:pass@{{server}}:{{port}}";
+Acquire::http::proxy "http://user:pass@{server}:{port}";
+Acquire::https::proxy "http://user:pass@{server}:{port}";
 ```
-The {{server}} and {{port}} have been replaced by my school's proxy servers host and port. Since my school username and password are required as part of connecting to the wifi, I did not have to place those in the file; the lines really do read "user:pass" before the @ symbol. If I had needed to put my actual username and password here for it to work, I'm not sure that I would have done it since this file is just stored as plain text.
+The {server} and {port} have been replaced by my school's proxy servers host and port. Since my school username and password are required as part of connecting to the wifi, I did not have to place those in the file; the lines really do read "user:pass" before the @ symbol. If I had needed to put my actual username and password here for it to work, I'm not sure that I would have done it since this file is just stored as plain text.
 
 Hopefully this simple solution will be useful to anyone using Linux in a Windows and macOS world.
 

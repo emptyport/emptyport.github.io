@@ -4,9 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta content="{{ page.title }}" property="og:title"/>
+	<meta content="{{ page.description }}" property="og:description"/>
+	<meta content="{{ site.url }}{{ page.url }}" property="og:url"/>
 	<link rel="stylesheet" href="/css/blog.css">
 	<script src="/js/blog.js"></script>
-	<script src="https://use.fontawesome.com/224e7fbd5e.js"></script>
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 	<title>Blog</title>
 	{% include ga.html %}
