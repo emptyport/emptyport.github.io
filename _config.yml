@@ -6,3 +6,4 @@ gems:
   - jekyll-sitemap
 plugins:
   - jekyll-sitemap
+  - jekyll-seo
