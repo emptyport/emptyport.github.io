@@ -20,4 +20,8 @@ The {server} and {port} have been replaced by my school's proxy servers host and
 
 Hopefully this simple solution will be useful to anyone using Linux in a Windows and macOS world.
 
+--Edit--
+
+Once you disconnect from the proxy (like when you get back home), you have to comment out the two lines in ```/etc/apt/apt.conf``` with a ```#```. Otherwise, apt and the app center will try to connect through a proxy that is no longer there.
+
 
