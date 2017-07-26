@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Should papers that are clearly biased be published?"
-date:   2017-07-26 17:10:00 -0500
+date:   2017-07-26 15:38:00 -0500
 categories: science
 description: You may have heard the recent news about how playing American football leads to brain injury. At least that's what the headlines are saying. How can you guard yourself against misinformation and bias in experimental data/methods?
 ---
