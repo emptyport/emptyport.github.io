@@ -32,14 +32,14 @@ article h1 a {
   color: black;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 700px) {
   .icon {
     font-size: 3em;
   }
   h1 {
-    font-size: 20px;
+    font-size: 22px;
   }
   article {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
