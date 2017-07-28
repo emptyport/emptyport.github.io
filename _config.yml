@@ -4,3 +4,5 @@ include: ["_pages"]
 permalink: /blog/:title/
 plugins:
   - jekyll-sitemap
+gems:
+  - jekyll-sitemap
