@@ -42,4 +42,7 @@ article h1 a {
   article {
     font-size: 1.5em;
   }
+  iframe {
+    width: 300px;
+  }
 }
