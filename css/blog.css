@@ -44,5 +44,6 @@ article h1 a {
   }
   iframe {
     width: 300px;
+    height: auto;
   }
 }
