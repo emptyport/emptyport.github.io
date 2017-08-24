@@ -7,6 +7,13 @@ body {
   font-size: 16px;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  height: auto;
+}
+
 article {
   margin: 5%;
 }
