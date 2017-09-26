@@ -1,16 +1,24 @@
 html, body {
-  background-color: #f2f2f2;
+  background-color: black;
+  color: #f2f2f2;
   font-family: 'Ubuntu', sans-serif;
 }
 
 img {
-  max-width: 100%;
+  max-width: 70%;
   display: block;
   height: auto;
   margin-bottom: 5px;
+  margin-left: 15%;
+  margin-right:  15%;
 }
 
 @media screen and (max-width: 700px) {
+  img {
+    max-width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
   .icon {
     font-size: 3em;
   }

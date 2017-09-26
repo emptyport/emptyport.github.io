@@ -44,6 +44,10 @@ html body {
   font-size: 50px;
 }
 
+.icon-brush {
+  font-size: 50px;
+}
+
 @media screen and (min-width: 700px) {
   .list-item {
     font-size: 1em;
@@ -78,6 +82,12 @@ html body {
   opacity: 0;
   animation: fadeIn 1s forwards;
   animation-delay: 0.4s;
+}
+
+.list-item-six {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
 }
 
 .list-item a {

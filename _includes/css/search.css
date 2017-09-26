@@ -10,8 +10,6 @@ img {
   margin-bottom: 5px;
 }
 
-@media screen and (max-width: 700px) {
-  .icon {
-    font-size: 3em;
-  }
+li {
+  list-style: none;
 }
