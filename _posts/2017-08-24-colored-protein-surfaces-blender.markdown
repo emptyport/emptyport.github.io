@@ -6,7 +6,7 @@ categories: science, animation
 description: Chimera is a great tool for visualizing protein structures, and Blender is a great tool for creating animations. This tutorial goes over how to export a protein structure from Chimera and then import it into Blender for animation. The key here is to keep the color data from Chimera and be able to use it in Blender.
 ---
 
-<img src="/images/protein_internal.gif" />
+<img src="/images/protein_internal.gif" alt="Colored protein surface"/>
 
 As I start my PhD and get back into biochemistry, I'm also getting back into animation. Animation is a great way to visual how proteins function because proteins are three dimensional molecules that interact in three dimensions. [UCSF Chimera](https://www.cgl.ucsf.edu/chimera/) is an excellent tool for viwing protein structures and is [capable of producing animations](https://pdb101.rcsb.org/events/video-challenge/tutorial-1). However, if you've ever seen the [Inner Life of a Cell video](https://www.youtube.com/watch?v=wJyUtbn0O5Y), you'll probably want to go for software that is more geared towards animation. My software of choice is [Blender](https://www.blender.org/). Chimera is probably sufficient for the vast majority of small, simple animations, but you'll definitely want to make a switch over to Blender if you plan on making a more complicated animation.
 
@@ -30,6 +30,6 @@ If you plan on using the internal renderer, open up the Materials for your prote
 #### Cycles
 If you plan on using Cycles, open up the Node editor and create a node for your protein's material. Create a new node and select "Attribute" from the Input submenu. In the name of the Attribute node put "Col" and connect its color to the color of the material node you are using. Give things a render to make sure the colors are showing up and you are good to go!
 
-<img src="/images/node_setup_protein.jpeg" />
+<img src="/images/node_setup_protein.jpeg" alt="Node setup"/>
 
 Go ahead and setup your scene how you'd like and make something cool!

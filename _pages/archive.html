@@ -1,5 +1,5 @@
 ---
-permalink: "/blog/"
+permalink: "/archive/"
 ---
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ permalink: "/blog/"
 	<link rel="stylesheet" href="/css/blog.css">
 	<script src="/js/blog.js"></script>
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
-	<title>Blog</title>
+	<title>Archive</title>
 	{% include ga.html %}
 </head>
 
@@ -27,16 +27,13 @@ permalink: "/blog/"
 		</form>
 	</div>
 	<div class="container">
-		{% for post in site.posts limit:10 %}
+		{% for post in site.posts %}
 			<article>
 				<h1><a href="{{ site.base_url }}{{ post.url }}">{{ post.title }}</a></h1>
 				<p>{{ post.date | date_to_string }}</p>
-				<p>{{ post.content | truncatewords: 100}}</p>
+				<p>{{ post.content | strip_html | truncatewords: 100}}</p>
 			</article>
 		{% endfor %}
-	</div>
-	<div>
-		Only the 10 most recent posts are displayed here. If you can't find what you're looking for, try searching for it or you can check out the <a href="{{ site.base_url }}/archive">archive</a>.
 	</div>
 	
 </body>
