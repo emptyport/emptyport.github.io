@@ -1,12 +1,17 @@
 ---
 permalink: "/science/mass-spec/mass-analyzers"
 ---
+<!DOCTYPE html>
 <html>
 
   <head>
     <title>Mass Analyzers</title>
     <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
     {% include ga.html %}
+
+    <link href="/css/katex.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200" rel="stylesheet">
 
   </head>
 
@@ -18,40 +23,186 @@ permalink: "/science/mass-spec/mass-analyzers"
   <div class="reveal">
     <div class="slides">
 
+       
+
+      
+
       <section>
-        Mass Analyzers
+        <h1>Mass Analyzers</h1>
       </section>
 
       <section>
-        Speed
+        <h1>Speed</h1>
       </section>
 
       <section data-state="massAccuracy">
-        <span class="accuracy"></span>
+        <h1 class="accuracy"></h1>
       </section>
 
       <!-- Section on resolution -->
       <section>
         <section>
-          Resolution
+          <h1>Resolution</h1>
         </section>
 
         <!-- Futurama clip -->
         <section data-background-iframe="https://www.youtube.com/embed/WwnI0RS6J5A?rel=0&autoplay=1">
         </section>
 
+        <!--Carbon-->
         <section>
-
+          <img src="/images/mass_analyzers/carbon.png" height="90%">
         </section>
 
+        <!-- Isotope animation-->
+        <section>
+          <canvas id="isotope-canvas" width="800" height="600"></canvas>
+          <br />
+          <span style="font-size:20px;">Mixed</span>
+          <label class="switch">
+            <input type="checkbox" id="isotope-checkbox">
+            <span class="slider round"></span>
+          </label>
+          <span style="font-size:20px;">Isotopes</span>
+          <style>
+            /* The switch - the box around the slider */
+            .switch {
+              position: relative;
+              display: inline-block;
+              width: 60px;
+              height: 34px;
+            }
+
+            /* Hide default HTML checkbox */
+            .switch input {display:none;}
+
+            /* The slider */
+            .slider {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #ccc;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+
+            .slider:before {
+              position: absolute;
+              content: "";
+              height: 26px;
+              width: 26px;
+              left: 4px;
+              bottom: 4px;
+              background-color: white;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+
+            input:checked + .slider {
+              background-color: #2196F3;
+            }
+
+            input:focus + .slider {
+              box-shadow: 0 0 1px #2196F3;
+            }
+
+            input:checked + .slider:before {
+              -webkit-transform: translateX(26px);
+              -ms-transform: translateX(26px);
+              transform: translateX(26px);
+            }
+
+            /* Rounded sliders */
+            .slider.round {
+              border-radius: 34px;
+            }
+
+            .slider.round:before {
+              border-radius: 50%;
+            }
+          </style>
+        </section>
+
+        <!--Resolution definition-->
+        <section>
+          <img src="/images/mass_analyzers/annotated.png">
+        </section>
+
+        <!--Resolution example-->
+        <section>
+          <img src="/images/mass_analyzers/resolutions.gif">
+        </section>
         
+      </section>
+
+      <!--TOF-->
+      <section>
+        <h1>Time-of-flight</h1>
+      </section>
+
+      <!--TOF Image-->
+      <section>
+        <a title="By K. K. Murray (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 4.0-3.0-2.5-2.0-1.0 (https://creativecommons.org/licenses/by-sa/4.0-3.0-2.5-2.0-1.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3ATOF-MS_schematic.gif" target="_blank">
+          <img width="1024" alt="TOF-MS schematic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/TOF-MS_schematic.gif/1024px-TOF-MS_schematic.gif"/>
+        </a>
+      </section>
+
+      <!--TOF Equations-->
+      <section>
+          <span class="fragment fade-in"><p id="tof_potential"></p></span>
+          <span class="fragment fade-in"><p id="tof_kinetic"></p></span>
+          <span class="fragment fade-in"><p id="tof_velocity"></p></span>
+          <span class="fragment fade-in"><p id="tof_combined"></p></span>
+          <span class="fragment fade-in"><p id="tof_final"></p></span>
+      </section>
+
+      <!--TOF video-->
+      <section data-background-video="/images/mass_analyzers/tof.mp4" data-background-video-loop="true" data-background-size="contain">
+      </section>
+
+      <!--Orbitrap-->
+      <section>
+        <h1>Orbitrap</h1>
+      </section>
+
+      <!--Orbitrap Image-->
+      <section>
+          <a title="By Thermo Fisher Scientific (Bremen) (Artwork by Thermo Fisher Scientific) [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AOrbitrapMA%26Injector.png" target="_blank">
+            <img width="512" alt="OrbitrapMA&Injector" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/OrbitrapMA%26Injector.png/512px-OrbitrapMA%26Injector.png"/>
+          </a>
+      </section>
+
+     <!--Orbitrap Equations-->
+     <section>
+        <span class="fragment fade-in"><p id="orbitrap_potential"></p></span>
+        <span class="fragment fade-in"><p id="orbitrap_motion1"></p></span>
+        <span class="fragment fade-in"><p id="orbitrap_motion2"></p></span>
+        <span class="fragment fade-in"><p id="orbitrap_motion3a"></p></span>
+      </section>
+
+      <section>
+          <span><p id="orbitrap_motion3b"></p></span>
+          <span class="fragment fade-in"><p id="orbitrap_frequency"></p></span>
+          <span class="fragment fade-in"><p id="orbitrap_omega"></p></span>
+      </section>
+
+      <!--Orbitrap video-->
+      <section data-background-video="/images/mass_analyzers/orbitrap.mp4" data-background-video-loop="true" data-background-size="contain">
+
       </section>
 
     </div>
   </div>
 
   {% include reveal.html %}
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
   <script src="/js/typed.min.js"></script>
+  <script src="/js/katex.min.js"></script>
   <script src="/js/mass-analyzers.js"></script>
 
   {% include footer.html %}
