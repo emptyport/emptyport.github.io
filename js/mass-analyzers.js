@@ -138,5 +138,13 @@ katex.render("\\ddot{z}=-\\frac{q}{m}kz", document.getElementById("orbitrap_moti
 katex.render("z(t) = z_0\\cos({\\omega}t) + \\sqrt{\\frac{2E_z}{k}}\\sin({\\omega}t)", document.getElementById("orbitrap_frequency"));
 katex.render("\\omega = \\sqrt{\\frac{q}{m}k}", document.getElementById("orbitrap_omega"));
 
+//Quadrupole equations
+//http://cires1.colorado.edu/jimenez/CHEM-5181/Lect/MS3_Quad.pdf
+katex.render("\\frac{d^2x}{d{\\phi}^2} = -({\\alpha}+2q{\\cos(2{\\phi})})x", document.getElementById("quad_dx"));
+katex.render("\\frac{d^2y}{d{\\phi}^2} = ({\\alpha}+2q{\\cos(2{\\phi})})y", document.getElementById("quad_dy"));
+katex.render("\\phi=\\frac{{\\omega}t}{2}", document.getElementById("quad_phi"));
+katex.render("\\alpha=\\frac{8ezU}{r_0^2m{\\omega}^2}", document.getElementById("quad_alpha"));
+katex.render("q=\\frac{4ezV}{r_0^2m{\\omega}^2}", document.getElementById("quad_q"));
+
 
 

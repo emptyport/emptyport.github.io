@@ -86,6 +86,10 @@ body {
   max-width: 95%;
   max-height: 95%; }
 
+.carbon {
+  height: 500px; }
+}
+
 .reveal strong,
 .reveal b {
   font-weight: bold; }
