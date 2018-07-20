@@ -1,0 +1,65 @@
+html, body {
+  background-color: #f2f2f2;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  font-size: 16px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  height: auto;
+}
+
+article {
+  margin: 5%;
+}
+
+article h1 {
+  width: 100%;
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  margin-bottom: 5px;
+}
+
+article h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.my-nav {
+  margin: 2%;
+}
+
+.my-nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.search-form {
+  margin-right: 2%;
+  float: right;
+}
+
+.icon {
+  font-size: 2em;
+}
+
+@media screen and (max-width: 700px) {
+  .icon {
+    font-size: 3em;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  article {
+    font-size: 1.5em;
+  }
+  iframe {
+    width: 300px;
+    height: auto;
+  }
+}
