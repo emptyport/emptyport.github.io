@@ -6,6 +6,9 @@
 	<link rel="stylesheet" href="/css/blog.css">
 	<script src="/js/blog.js"></script>
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />		
+
 	<title>Blog</title>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -179,67 +182,76 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
   });
 </script> 
 
-<body>
-	<div class="my-nav">
-		<a href="/"><svg class="icon icon-home"><use xlink:href="#icon-home"></use></svg></a>
+<body class="bg-blog">
+	<div class="nav-container">
+		<a href='/' class='tablink tab-home' id='tab-home'>Home</a>
+<a href='/blog' class='tablink tab-blog' id='tab-blog'>Blog</a>
+<a href='/bioinformatics' class='tablink tab-bioinformatics' id='tab-bioinformatics'>Bioinformatics</a>
+<a href='/art' class='tablink tab-art' id='tab-art'>Art</a>
+<a href='/projects' class='tablink tab-projects' id='tab-projects'>Projects</a>
 
-		<form action="/search" method="get" class="search-form">
-			<input type="text" id="search-box" name="query" placeholder="Search">
-			<input type="submit" value="Go!">
-		</form>
 	</div>
-	<div class="container">
+
+	
+	<div class="content-container">
+		<div class="search-div">
+			<form action="/search" method="get" class="search-form">
+				<input type="text" id="search-box" name="query" placeholder="Search">
+				<input type="submit" value="Go!">
+			</form>
+		</div>
 		
-			<article>
-				<h1><a href="/blog/why-i'm-switching-to-javascript/">Why I'm switching to JavaScript</a></h1>
-				<p>18 May 2018</p>
-				<p><p>The first programming language I ever learned was Java. This was back in high school and I’ve since forgotten most of the syntax. I next became acquainted with Ruby when I joined a lab in college that used Ruby for most of their programming needs. The PI (principal investigator) was a self-taught programmer and he’d latched onto Ruby. He also happened to be the author of the <a href="https://github.com/princelab/mspire">mspire</a> mass spectrometry library which he wrote in Ruby. Also during this time I took a class which used C++, but I did my best to stay away from it.</p> <p>My PI...</p>
-			</article>
-		
-			<article>
-				<h1><a href="/blog/colored-protein-surfaces-blender/">Coloring Protein Surfaces in Blender</a></h1>
-				<p>24 Aug 2017</p>
-				<p><p><img src="/images/protein_internal.gif" alt="Colored protein surface" /></p> <p>As I start my PhD and get back into biochemistry, I’m also getting back into animation. Animation is a great way to visual how proteins function because proteins are three dimensional molecules that interact in three dimensions. <a href="https://www.cgl.ucsf.edu/chimera/">UCSF Chimera</a> is an excellent tool for viwing protein structures and is <a href="https://pdb101.rcsb.org/events/video-challenge/tutorial-1">capable of producing animations</a>. However, if you’ve ever seen the <a href="https://www.youtube.com/watch?v=wJyUtbn0O5Y">Inner Life of a Cell video</a>, you’ll probably want to go for software that is more geared towards animation. My software of choice is <a href="https://www.blender.org/">Blender</a>. Chimera is probably sufficient for the...</p>
-			</article>
-		
-			<article>
-				<h1><a href="/blog/lab-shakers/">Overpriced Lab Shakers</a></h1>
-				<p>07 Aug 2017</p>
-				<p><p>While I was an undergrad, one of my research projects dealt with scorpion fluorescence. One of my tasks was to extract the fluorophores from the cuticle. I won’t go into any details about the protocol, but I ended up with ground up scorpion cuticle in ethanol. At this point we were wanting to stir our scorpion slurry so that all the bits and pieces would be exposed to the ethanol so that our fluorophores could dissolve. Unfortunately, we were borrowing lab space for our project and did not have access to a lab shaker. We did have a small budget...</p>
-			</article>
-		
-			<article>
-				<h1><a href="/blog/what-in-the-world-is-proteomics/">Proteomics? What in the world is that!?</a></h1>
-				<p>28 Jul 2017</p>
-				<p><p>One of the fields I am interested in is that of proteomics. The problem with that is that the average person probably has never heard that word in their life, so I usually tell people that I study proteins. While this certainly avoids a lot of confusion, saying that I study proteins is still a pretty vague answer. This post is designed to be an introduction to proteomics that anyone (including your grandma) can understand.</p> <p>So what is proteomics? Proteomics is a cousin to genomics, which is something you may have heard of before. Genomics deals with figuring out what...</p>
-			</article>
-		
-			<article>
-				<h1><a href="/blog/bias-in-publishing/">Should papers that are clearly biased be published?</a></h1>
-				<p>26 Jul 2017</p>
-				<p><p>You may have heard the recent news about how playing American football leads to brain injury. At least that’s what the headlines are saying. Headlines such as the click-baity <a href="https://www.nytimes.com/interactive/2017/07/25/sports/football/nfl-cte.html">“111 N.F.L. Brains. All But One Had C.T.E.”</a> from the New York Times and the apocalyptic <a href="https://www.forbes.com/sites/bobcook/2017/07/25/the-cte-study-that-could-kill-football/#5df0fa92b39b">“The CTE Study That Could Kill Football”</a> from Forbes. But if you read the articles, you’ll quickly learn that the study only includes brains that were donated to a program studying repetitive head trauma. If you take a look at Table 3 in the <a href="http://jamanetwork.com/journals/jama/fullarticle/2645104">original article</a>, it’s pretty clear that the majority...</p>
-			</article>
-		
-			<article>
-				<h1><a href="/blog/linux-at-ut-southwestern/">Using Linux at UT Southwestern</a></h1>
-				<p>20 Jul 2017</p>
-				<p><p>I recently made a complete switch to Linux. I’d been dual booting Windows 10 and Ubuntu before, but I decided to start fresh before I started my PhD program. I am now running solely <a href="https://elementary.io/">elementary OS</a> (no more Windows) and I have to say I am quite pleased so far.</p> <p>However, there was a small hiccup with my transition to 100% Linux and that has to do with my school’s wifi. Since I am a student, I have to sign in to their wifi with my student credentials and use a proxy server if I want to connect outside...</p>
-			</article>
-		
-			<article>
-				<h1><a href="/blog/welcome/">Welcome!</a></h1>
-				<p>20 Jul 2017</p>
-				<p><p>This blog is where I’ll be sharing the occasional tutorial, interesting finding, project, or rant about something unimportant. For now it’s pretty empty, but be sure to check back in the future!</p>
+		<div class="blog-list">
+			
+				<article>
+					<h1><a href="/blog/why-i'm-switching-to-javascript/">Why I'm switching to JavaScript</a></h1>
+					<p>18 May 2018</p>
+					<p><p>The first programming language I ever learned was Java. This was back in high school and I’ve since forgotten most of the syntax. I next became acquainted with Ruby when I joined a lab in college that used Ruby for most of their programming needs. The PI (principal investigator) was a self-taught programmer and he’d latched onto Ruby. He also happened to be the author of the <a href="https://github.com/princelab/mspire">mspire</a> mass spectrometry library which he wrote in Ruby. Also during this time I took a class which used C++, but I did my best to stay away from it.</p> <p>My PI...</p>
+				</article>
+			
+				<article>
+					<h1><a href="/blog/colored-protein-surfaces-blender/">Coloring Protein Surfaces in Blender</a></h1>
+					<p>24 Aug 2017</p>
+					<p><p><img src="/images/protein_internal.gif" alt="Colored protein surface" /></p> <p>As I start my PhD and get back into biochemistry, I’m also getting back into animation. Animation is a great way to visual how proteins function because proteins are three dimensional molecules that interact in three dimensions. <a href="https://www.cgl.ucsf.edu/chimera/">UCSF Chimera</a> is an excellent tool for viwing protein structures and is <a href="https://pdb101.rcsb.org/events/video-challenge/tutorial-1">capable of producing animations</a>. However, if you’ve ever seen the <a href="https://www.youtube.com/watch?v=wJyUtbn0O5Y">Inner Life of a Cell video</a>, you’ll probably want to go for software that is more geared towards animation. My software of choice is <a href="https://www.blender.org/">Blender</a>. Chimera is probably sufficient for the...</p>
+				</article>
+			
+				<article>
+					<h1><a href="/blog/lab-shakers/">Overpriced Lab Shakers</a></h1>
+					<p>07 Aug 2017</p>
+					<p><p>While I was an undergrad, one of my research projects dealt with scorpion fluorescence. One of my tasks was to extract the fluorophores from the cuticle. I won’t go into any details about the protocol, but I ended up with ground up scorpion cuticle in ethanol. At this point we were wanting to stir our scorpion slurry so that all the bits and pieces would be exposed to the ethanol so that our fluorophores could dissolve. Unfortunately, we were borrowing lab space for our project and did not have access to a lab shaker. We did have a small budget...</p>
+				</article>
+			
+				<article>
+					<h1><a href="/blog/what-in-the-world-is-proteomics/">Proteomics? What in the world is that!?</a></h1>
+					<p>28 Jul 2017</p>
+					<p><p>One of the fields I am interested in is that of proteomics. The problem with that is that the average person probably has never heard that word in their life, so I usually tell people that I study proteins. While this certainly avoids a lot of confusion, saying that I study proteins is still a pretty vague answer. This post is designed to be an introduction to proteomics that anyone (including your grandma) can understand.</p> <p>So what is proteomics? Proteomics is a cousin to genomics, which is something you may have heard of before. Genomics deals with figuring out what...</p>
+				</article>
+			
+				<article>
+					<h1><a href="/blog/bias-in-publishing/">Should papers that are clearly biased be published?</a></h1>
+					<p>26 Jul 2017</p>
+					<p><p>You may have heard the recent news about how playing American football leads to brain injury. At least that’s what the headlines are saying. Headlines such as the click-baity <a href="https://www.nytimes.com/interactive/2017/07/25/sports/football/nfl-cte.html">“111 N.F.L. Brains. All But One Had C.T.E.”</a> from the New York Times and the apocalyptic <a href="https://www.forbes.com/sites/bobcook/2017/07/25/the-cte-study-that-could-kill-football/#5df0fa92b39b">“The CTE Study That Could Kill Football”</a> from Forbes. But if you read the articles, you’ll quickly learn that the study only includes brains that were donated to a program studying repetitive head trauma. If you take a look at Table 3 in the <a href="http://jamanetwork.com/journals/jama/fullarticle/2645104">original article</a>, it’s pretty clear that the majority...</p>
+				</article>
+			
+				<article>
+					<h1><a href="/blog/linux-at-ut-southwestern/">Using Linux at UT Southwestern</a></h1>
+					<p>20 Jul 2017</p>
+					<p><p>I recently made a complete switch to Linux. I’d been dual booting Windows 10 and Ubuntu before, but I decided to start fresh before I started my PhD program. I am now running solely <a href="https://elementary.io/">elementary OS</a> (no more Windows) and I have to say I am quite pleased so far.</p> <p>However, there was a small hiccup with my transition to 100% Linux and that has to do with my school’s wifi. Since I am a student, I have to sign in to their wifi with my student credentials and use a proxy server if I want to connect outside...</p>
+				</article>
+			
+				<article>
+					<h1><a href="/blog/welcome/">Welcome!</a></h1>
+					<p>20 Jul 2017</p>
+					<p><p>This blog is where I’ll be sharing the occasional tutorial, interesting finding, project, or rant about something unimportant. For now it’s pretty empty, but be sure to check back in the future!</p>
 </p>
-			</article>
-		
-	</div>
-	<div>
-		<i>Only the 10 most recent posts are displayed here. If you can't find what you're looking for, try searching for it or check in the <a href="/archive">archive</a>.</i>
+				</article>
+			
+			<i>Only the 10 most recent posts are displayed here. If you can't find what you're looking for, try searching for it or check in the <a href="/archive">archive</a>.</i>
+		</div>
 	</div>
 	
-</body>
-  <span style="font-size: 10px; float:right; bottom:0;"><a href="/privacy">Privacy</a></span>
+	<div class="footer">
+		<span><a href="/privacy">Privacy</a></span>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
@@ -258,5 +270,11 @@ window.cookieconsent.initialise({
   "position": "bottom-right"
 })});
 </script>
+	</div>
+</body>
 
+  	<script>
+		var homeTab = document.getElementById('tab-blog');
+		homeTab.classList.add('bg-blog');
+	</script>
 </html>

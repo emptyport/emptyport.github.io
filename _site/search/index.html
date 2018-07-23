@@ -1,7 +1,10 @@
 <head>
   <title>Search</title>
   <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />    
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/css/blog.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />		
+
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -3132,20 +3135,20 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
   }
 
   function displaySearchResults(results, store) {
-    var searchResults = document.getElementById('search-results');
+    var searchResults = document.getElementById('blog-list');
 
     if (results.length) { // Are there any results?
       var appendString = '';
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        appendString += '<p>' + item.summary + '...</p></li>';
+        appendString += '<article><h1><a href="' + item.url + '">' + item.title + '</a></h1>';
+        appendString += '<p>' + item.summary + '...</p></article>';
       }
 
       searchResults.innerHTML = appendString;
     } else {
-      searchResults.innerHTML = '<li>No results found</li>';
+      searchResults.innerHTML = 'No results found';
     }
   }
 
@@ -3180,7 +3183,52 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
   
 </script>
 
-<a href="/blog"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></a>
-<br />
+<body class="bg-blog">
+    <div class="page-container">
+        <div class="nav-container">
+            <a href='/' class='tablink tab-home' id='tab-home'>Home</a>
+<a href='/blog' class='tablink tab-blog' id='tab-blog'>Blog</a>
+<a href='/bioinformatics' class='tablink tab-bioinformatics' id='tab-bioinformatics'>Bioinformatics</a>
+<a href='/art' class='tablink tab-art' id='tab-art'>Art</a>
+<a href='/projects' class='tablink tab-projects' id='tab-projects'>Projects</a>
 
-<div id='search-results'></div>
+        </div>
+        
+        <div class='content-container'>
+            <div class="search-div">
+              <form action="/search" method="get" class="search-form">
+                <input type="text" id="search-box" name="query" placeholder="Search">
+                <input type="submit" value="Go!">
+              </form>
+            </div>
+            <div id='blog-list' class="blog-list"></div>
+        </div>
+
+        <div class="footer">
+            <span><a href="/privacy">Privacy</a></span>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-right"
+})});
+</script>
+        </div>
+    </div>	
+</body>
+
+<script>
+var homeTab = document.getElementById('tab-blog');
+homeTab.classList.add('bg-blog');
+</script>

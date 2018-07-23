@@ -181,23 +181,44 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
 </script>
 
 	</head>
-	<body>
-		<div class="nav-container">
-			<a href='/' class='tablink tab-home'>Home</a>
-<a href='/blog' class='tablink tab-blog'>Blog</a>
-<a href='/bioinformatics' class='tablink tab-bioinformatics'>Bioinformatics</a>
-<a href='/art' class='tablink tab-art'>Art</a>
-<a href='/projects' class='tablink tab-projects'>Projects</a>
-		</div>
-		
-		<div>
-			Body content
-		</div>
-	</body>
+	<body class='bg-home'>
+		<div class="page-container">
+			<div class="nav-container">
+				<a href='/' class='tablink tab-home' id='tab-home'>Home</a>
+<a href='/blog' class='tablink tab-blog' id='tab-blog'>Blog</a>
+<a href='/bioinformatics' class='tablink tab-bioinformatics' id='tab-bioinformatics'>Bioinformatics</a>
+<a href='/art' class='tablink tab-art' id='tab-art'>Art</a>
+<a href='/projects' class='tablink tab-projects' id='tab-projects'>Projects</a>
 
-	<footer>
-		<div class="footer">
-			<span style="font-size: 10px; float:right; bottom:0;"><a href="/privacy">Privacy</a></span>
+			</div>
+			
+			<div class='content-container'>
+				<h2>
+					Hey!
+				</h2>
+
+				<h3>
+					Welcome to my website!
+				</h3>
+
+				<p>
+					I'm a scientist who likes to program.
+				</p>
+
+				<p>
+					Take a look around and feel free to connect with me on social media!
+				</p>
+
+				<div class="social">
+					<a href="https://github.com/emptyport" target="_blank"><svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg></a>
+					<a href="https://www.linkedin.com/in/mtporter/" target="_blank"><svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg></a>
+					<a href="https://twitter.com/MikeTheBiochem" target="_blank"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+				</div>
+				
+			</div>
+
+			<div class="footer">
+				<span><a href="/privacy">Privacy</a></span>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
@@ -216,6 +237,14 @@ window.cookieconsent.initialise({
   "position": "bottom-right"
 })});
 </script>
-		</div>
-	</footer>
+			</div>
+		</div>	
+	</body>
+
+		
+
+	<script>
+		var homeTab = document.getElementById('tab-home');
+		homeTab.classList.add('bg-home');
+	</script>
 </html>

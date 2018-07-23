@@ -10,6 +10,9 @@ permalink: "/blog/"
 	<link rel="stylesheet" href="/css/blog.css">
 	<script src="/js/blog.js"></script>
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />		
+
 	<title>Blog</title>
 	{% include ga.html %}
 </head>
@@ -17,29 +20,39 @@ permalink: "/blog/"
 {% include icons.html %}
 {% include fonts.html %}
 
-<body>
-	<div class="my-nav">
-		<a href="/"><svg class="icon icon-home"><use xlink:href="#icon-home"></use></svg></a>
+<body class="bg-blog">
+	<div class="nav-container">
+		{% include nav.html %}
+	</div>
 
-		<form action="{{ site.base_url }}/search" method="get" class="search-form">
-			<input type="text" id="search-box" name="query" placeholder="Search">
-			<input type="submit" value="Go!">
-		</form>
-	</div>
-	<div class="container">
-		{% for post in site.posts limit:10 %}
-			<article>
-				<h1><a href="{{ site.base_url }}{{ post.url }}">{{ post.title }}</a></h1>
-				<p>{{ post.date | date_to_string }}</p>
-				<p>{{ post.content | truncatewords: 100}}</p>
-			</article>
-		{% endfor %}
-	</div>
-	<div>
-		<i>Only the 10 most recent posts are displayed here. If you can't find what you're looking for, try searching for it or check in the <a href="{{ site.base_url }}/archive">archive</a>.</i>
+	
+	<div class="content-container">
+		<div class="search-div">
+			<form action="{{ site.base_url }}/search" method="get" class="search-form">
+				<input type="text" id="search-box" name="query" placeholder="Search">
+				<input type="submit" value="Go!">
+			</form>
+		</div>
+		
+		<div class="blog-list">
+			{% for post in site.posts limit:10 %}
+				<article>
+					<h1><a href="{{ site.base_url }}{{ post.url }}">{{ post.title }}</a></h1>
+					<p>{{ post.date | date_to_string }}</p>
+					<p>{{ post.content | truncatewords: 100}}</p>
+				</article>
+			{% endfor %}
+			<i>Only the 10 most recent posts are displayed here. If you can't find what you're looking for, try searching for it or check in the <a href="{{ site.base_url }}/archive">archive</a>.</i>
+		</div>
 	</div>
 	
+	<div class="footer">
+		{% include footer.html %}
+	</div>
 </body>
-  {% include footer.html %}
 
+  	<script>
+		var homeTab = document.getElementById('tab-blog');
+		homeTab.classList.add('bg-blog');
+	</script>
 </html>

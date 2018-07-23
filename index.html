@@ -18,19 +18,47 @@
 		{% include ga.html %}
 
 	</head>
-	<body>
-		<div class="nav-container">
-			{% include nav.html %}
-		</div>
-		
-		<div>
-			Body content
-		</div>
+	<body class='bg-home'>
+		<div class="page-container">
+			<div class="nav-container">
+				{% include nav.html %}
+			</div>
+			
+			<div class='content-container'>
+				<h2>
+					Hey!
+				</h2>
+
+				<h3>
+					Welcome to my website!
+				</h3>
+
+				<p>
+					I'm a scientist who likes to program.
+				</p>
+
+				<p>
+					Take a look around and feel free to connect with me on social media!
+				</p>
+
+				<div class="social">
+					<a href="https://github.com/emptyport" target="_blank"><svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg></a>
+					<a href="https://www.linkedin.com/in/mtporter/" target="_blank"><svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg></a>
+					<a href="https://twitter.com/MikeTheBiochem" target="_blank"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+				</div>
+				
+			</div>
+
+			<div class="footer">
+				{% include footer.html %}
+			</div>
+		</div>	
 	</body>
 
-	<footer>
-		<div class="footer">
-			{% include footer.html %}
-		</div>
-	</footer>
+		
+
+	<script>
+		var homeTab = document.getElementById('tab-home');
+		homeTab.classList.add('bg-home');
+	</script>
 </html>
