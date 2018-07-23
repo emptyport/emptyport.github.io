@@ -5,6 +5,3 @@ permalink: /blog/:title/
 plugins:
   - jekyll-sitemap
   - jekyll-seo
-gems:
-  - jekyll-sitemap
-  - jekyll-seo

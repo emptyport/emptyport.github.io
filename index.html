@@ -11,7 +11,7 @@
 
 		<title>Michael Porter</title>
 
-		
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />		
 		
 		{% include icons.html %}
 		{% include fonts.html %}
@@ -19,33 +19,18 @@
 
 	</head>
 	<body>
-
-		<div class='container'>
-			<div class='list-item list-item-one'>
-				<a href='/about'><svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg><br/>About</a>
-			</div>
-			<div class='list-item list-item-two'>
-				<a href='/science'><svg class="icon icon-flask"><use xlink:href="#icon-flask"></use></svg><br/>Science</a>
-			</div>
-			<div class='list-item list-item-three'>
-				<a href='/programming'><svg class="icon icon-laptop"><use xlink:href="#icon-laptop"></use></svg><br/>Programming</a>
-			</div>
-			<div class='list-item list-item-four'>
-				<a href='/art'><svg class="icon icon-brush"><use 
-					xlink:href="#icon-brush"></use></svg><br/>Art</a>
-			</div>
-			<div class='list-item list-item-five'>
-				<a href='/photography'><svg class="icon icon-camera"><use xlink:href="#icon-camera"></use></svg><br/>Photography</a>
-			</div>
-			<div class='list-item list-item-six'>
-				<a href='/blog'><svg class="icon icon-book"><use xlink:href="#icon-book"></use></svg><br/>Blog</a>
-			</div>
+		<div class="nav-container">
+			{% include nav.html %}
 		</div>
-
+		
+		<div>
+			Body content
+		</div>
 	</body>
 
 	<footer>
-  {% include footer.html %}
-
+		<div class="footer">
+			{% include footer.html %}
+		</div>
 	</footer>
 </html>
