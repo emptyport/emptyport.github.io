@@ -4,9 +4,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta content="Why I'm switching to JavaScript" property="og:title"/>
 	<meta content="Python is usually the language of choice for scientists to do their programming in. I love Python, but I also love JavaScript, and with the rise of cloud computing, we are going to need libraries we can use in front-end development." property="og:description"/>
-	<meta content="http://localhost:4000/blog/why-i'm-switching-to-javascript/" property="og:url"/>	
+	<meta content="https://emptyport.github.io/blog/why-i'm-switching-to-javascript/" property="og:url"/>	
 	<link rel="stylesheet" href="/css/blog.css">
-	<script src="/js/blog.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />		
+
+
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 	<title>Why I'm switching to JavaScript</title>
 	<script>
@@ -181,15 +183,23 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
   });
 </script> 
 
-<body>
-	<div class="my-nav">
-		<a href="/blog"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></a>
+<body class="bg-blog">
+	<div class="nav-container">
+		<a href='/' class='tablink tab-home' id='tab-home'>Home</a>
+<a href='/blog' class='tablink tab-blog' id='tab-blog'>Blog</a>
+<a href='/bioinformatics' class='tablink tab-bioinformatics' id='tab-bioinformatics'>Bioinformatics</a>
+<a href='/art' class='tablink tab-art' id='tab-art'>Art</a>
+<a href='/projects' class='tablink tab-projects' id='tab-projects'>Projects</a>
+
 	</div>
-	<div class="container">
-		<article>
-			<h1><a href="/blog/why-i'm-switching-to-javascript/">Why I'm switching to JavaScript</a></h1>
-			<p>18 May 2018</p>
-			<p><p>The first programming language I ever learned was Java. This was back in high school and I’ve since forgotten most of the syntax. I next became acquainted with Ruby when I joined a lab in college that used Ruby for most of their programming needs. The PI (principal investigator) was a self-taught programmer and he’d latched onto Ruby. He also happened to be the author of the <a href="https://github.com/princelab/mspire">mspire</a> mass spectrometry library which he wrote in Ruby. Also during this time I took a class which used C++, but I did my best to stay away from it.</p>
+
+	
+	<div class="content-container">
+		<div class="blog-article">
+			<article>
+				<h1><a href="/blog/why-i'm-switching-to-javascript/">Why I'm switching to JavaScript</a></h1>
+				<p>18 May 2018</p>
+				<p><p>The first programming language I ever learned was Java. This was back in high school and I’ve since forgotten most of the syntax. I next became acquainted with Ruby when I joined a lab in college that used Ruby for most of their programming needs. The PI (principal investigator) was a self-taught programmer and he’d latched onto Ruby. He also happened to be the author of the <a href="https://github.com/princelab/mspire">mspire</a> mass spectrometry library which he wrote in Ruby. Also during this time I took a class which used C++, but I did my best to stay away from it.</p>
 
 <p>My PI left while I still had about a year and a half left, and the lab I switched to was using Python. I made the switch from Ruby to Python and I was generally happy. Python also had a mass spectrometry library and a lot of support for numerical and scientific computing.</p>
 
@@ -203,10 +213,13 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
 
 <p>My hope is to get more people excited about using JavaScript and to make it more mainstream in the mass spec community.</p>
 </p>
-		</article>
+			</article>
+		</div>
+		<br />
 	</div>
-</body>
-  <span><a href="/privacy">Privacy</a></span>
+	
+	<div class="footer">
+		<span><a href="/privacy">Privacy</a></span>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
@@ -225,5 +238,13 @@ window.cookieconsent.initialise({
   "position": "bottom-right"
 })});
 </script>
+	</div>
+</body>
+
+<script>
+	var homeTab = document.getElementById('tab-blog');
+	homeTab.classList.add('bg-blog');
+</script>
+
 
 </html>

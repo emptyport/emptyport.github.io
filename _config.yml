@@ -2,6 +2,6 @@ port:  4000
 encoding: utf-8
 include: ["_pages"]
 permalink: /blog/:title/
+url: "https://emptyport.github.io"
 plugins:
   - jekyll-sitemap
-  - jekyll-seo

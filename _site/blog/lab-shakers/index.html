@@ -4,9 +4,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta content="Overpriced Lab Shakers" property="og:title"/>
 	<meta content="Lab shakers are useful, ubiquitous, and overpriced. If you need to keep your sample moving but don't need the associated bells, whistles, and price tag, stick it to the equipment manufacturers and make your own!" property="og:description"/>
-	<meta content="http://localhost:4000/blog/lab-shakers/" property="og:url"/>	
+	<meta content="https://emptyport.github.io/blog/lab-shakers/" property="og:url"/>	
 	<link rel="stylesheet" href="/css/blog.css">
-	<script src="/js/blog.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />		
+
+
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 	<title>Overpriced Lab Shakers</title>
 	<script>
@@ -181,15 +183,23 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
   });
 </script> 
 
-<body>
-	<div class="my-nav">
-		<a href="/blog"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></a>
+<body class="bg-blog">
+	<div class="nav-container">
+		<a href='/' class='tablink tab-home' id='tab-home'>Home</a>
+<a href='/blog' class='tablink tab-blog' id='tab-blog'>Blog</a>
+<a href='/bioinformatics' class='tablink tab-bioinformatics' id='tab-bioinformatics'>Bioinformatics</a>
+<a href='/art' class='tablink tab-art' id='tab-art'>Art</a>
+<a href='/projects' class='tablink tab-projects' id='tab-projects'>Projects</a>
+
 	</div>
-	<div class="container">
-		<article>
-			<h1><a href="/blog/lab-shakers/">Overpriced Lab Shakers</a></h1>
-			<p>07 Aug 2017</p>
-			<p><p>While I was an undergrad, one of my research projects dealt with scorpion fluorescence. One of my tasks was to extract the fluorophores from the cuticle. I won’t go into any details about the protocol, but I ended up with ground up scorpion cuticle in ethanol. At this point we were wanting to stir our scorpion slurry so that all the bits and pieces would be exposed to the ethanol so that our fluorophores could dissolve. Unfortunately, we were borrowing lab space for our project and did not have access to a lab shaker. We did have a small budget to work with so I looked up lab shakers online. As soon as I saw the prices, ranging from several hundred to several thousand dollars, I knew there had to be a cheaper way to keep my samples stirring.</p>
+
+	
+	<div class="content-container">
+		<div class="blog-article">
+			<article>
+				<h1><a href="/blog/lab-shakers/">Overpriced Lab Shakers</a></h1>
+				<p>07 Aug 2017</p>
+				<p><p>While I was an undergrad, one of my research projects dealt with scorpion fluorescence. One of my tasks was to extract the fluorophores from the cuticle. I won’t go into any details about the protocol, but I ended up with ground up scorpion cuticle in ethanol. At this point we were wanting to stir our scorpion slurry so that all the bits and pieces would be exposed to the ethanol so that our fluorophores could dissolve. Unfortunately, we were borrowing lab space for our project and did not have access to a lab shaker. We did have a small budget to work with so I looked up lab shakers online. As soon as I saw the prices, ranging from several hundred to several thousand dollars, I knew there had to be a cheaper way to keep my samples stirring.</p>
 
 <p>A lab shaker in its most basic form is a platform that rocks back and forth. There are some variations on this idea such as orbital shakers, and you can also get shakers with fancy speed and temperature controls, but for our purposes we just needed a rocking platform. Why such a device would cost so much is beyond me. My best guess is that when researchers are buying equipment, they are usually sitting on a pile of money (which actually probably isn’t enough money to be called a ‘pile’) in the form of start-up funds or a grant. A lab shaker is one of those ubiquitous pieces of lab equipment that you just need to get, and when you look at the price of a lab shaker in the context of a grant, it doesn’t seem quite as expensive. I really don’t think lab shakers should be that expensive, but they are. My solution to the problem was to make one myself.</p>
 
@@ -203,10 +213,13 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
 
 <p>Lab equipment tends to be quite expensive, and some of it rightfully so, but general purpose lab shakers should not be as expensive as they are.</p>
 </p>
-		</article>
+			</article>
+		</div>
+		<br />
 	</div>
-</body>
-  <span><a href="/privacy">Privacy</a></span>
+	
+	<div class="footer">
+		<span><a href="/privacy">Privacy</a></span>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
@@ -225,5 +238,13 @@ window.cookieconsent.initialise({
   "position": "bottom-right"
 })});
 </script>
+	</div>
+</body>
+
+<script>
+	var homeTab = document.getElementById('tab-blog');
+	homeTab.classList.add('bg-blog');
+</script>
+
 
 </html>

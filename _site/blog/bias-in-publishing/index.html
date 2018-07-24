@@ -4,9 +4,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta content="Should papers that are clearly biased be published?" property="og:title"/>
 	<meta content="You may have heard the recent news about how playing American football leads to brain injury. At least that's what the headlines are saying. How can you guard yourself against misinformation and bias in experimental data/methods?" property="og:description"/>
-	<meta content="http://localhost:4000/blog/bias-in-publishing/" property="og:url"/>	
+	<meta content="https://emptyport.github.io/blog/bias-in-publishing/" property="og:url"/>	
 	<link rel="stylesheet" href="/css/blog.css">
-	<script src="/js/blog.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />		
+
+
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 	<title>Should papers that are clearly biased be published?</title>
 	<script>
@@ -181,15 +183,23 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
   });
 </script> 
 
-<body>
-	<div class="my-nav">
-		<a href="/blog"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></a>
+<body class="bg-blog">
+	<div class="nav-container">
+		<a href='/' class='tablink tab-home' id='tab-home'>Home</a>
+<a href='/blog' class='tablink tab-blog' id='tab-blog'>Blog</a>
+<a href='/bioinformatics' class='tablink tab-bioinformatics' id='tab-bioinformatics'>Bioinformatics</a>
+<a href='/art' class='tablink tab-art' id='tab-art'>Art</a>
+<a href='/projects' class='tablink tab-projects' id='tab-projects'>Projects</a>
+
 	</div>
-	<div class="container">
-		<article>
-			<h1><a href="/blog/bias-in-publishing/">Should papers that are clearly biased be published?</a></h1>
-			<p>26 Jul 2017</p>
-			<p><p>You may have heard the recent news about how playing American football leads to brain injury. At least that’s what the headlines are saying. Headlines such as the click-baity <a href="https://www.nytimes.com/interactive/2017/07/25/sports/football/nfl-cte.html">“111 N.F.L. Brains. All But One Had C.T.E.”</a> from the New York Times and the apocalyptic <a href="https://www.forbes.com/sites/bobcook/2017/07/25/the-cte-study-that-could-kill-football/#5df0fa92b39b">“The CTE Study That Could Kill Football”</a> from Forbes. But if you read the articles, you’ll quickly learn that the study only includes brains that were donated to a program studying repetitive head trauma. If you take a look at Table 3 in the <a href="http://jamanetwork.com/journals/jama/fullarticle/2645104">original article</a>, it’s pretty clear that the majority of the individuals whose brains were donated exhibited signs of cognitive decline. In other words, these brains were coming from individuals who were suspected of having possible brain damage. In the words of the article’s primary author, Dr. Ann McKee,</p>
+
+	
+	<div class="content-container">
+		<div class="blog-article">
+			<article>
+				<h1><a href="/blog/bias-in-publishing/">Should papers that are clearly biased be published?</a></h1>
+				<p>26 Jul 2017</p>
+				<p><p>You may have heard the recent news about how playing American football leads to brain injury. At least that’s what the headlines are saying. Headlines such as the click-baity <a href="https://www.nytimes.com/interactive/2017/07/25/sports/football/nfl-cte.html">“111 N.F.L. Brains. All But One Had C.T.E.”</a> from the New York Times and the apocalyptic <a href="https://www.forbes.com/sites/bobcook/2017/07/25/the-cte-study-that-could-kill-football/#5df0fa92b39b">“The CTE Study That Could Kill Football”</a> from Forbes. But if you read the articles, you’ll quickly learn that the study only includes brains that were donated to a program studying repetitive head trauma. If you take a look at Table 3 in the <a href="http://jamanetwork.com/journals/jama/fullarticle/2645104">original article</a>, it’s pretty clear that the majority of the individuals whose brains were donated exhibited signs of cognitive decline. In other words, these brains were coming from individuals who were suspected of having possible brain damage. In the words of the article’s primary author, Dr. Ann McKee,</p>
 <blockquote>
   <p>“Families don’t donate brains of their loved one unless they’re concerned about the person. So all the players in this study had - on some level, were symptomatic. So that leaves you with a very skewed representation.”</p>
 </blockquote>
@@ -211,10 +221,13 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
 
 <p>So what is one to do? Since eliminating bias completely isn’t feasible, my recommendation is to always try to find the original scientific article and read it critically to make sure you are understanding what is actually going on. If you are unable to do that, try to find the same story from a few different sources to try to “average” things out.</p>
 </p>
-		</article>
+			</article>
+		</div>
+		<br />
 	</div>
-</body>
-  <span><a href="/privacy">Privacy</a></span>
+	
+	<div class="footer">
+		<span><a href="/privacy">Privacy</a></span>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
@@ -233,5 +246,13 @@ window.cookieconsent.initialise({
   "position": "bottom-right"
 })});
 </script>
+	</div>
+</body>
+
+<script>
+	var homeTab = document.getElementById('tab-blog');
+	homeTab.classList.add('bg-blog');
+</script>
+
 
 </html>

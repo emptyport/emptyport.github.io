@@ -18,6 +18,9 @@ permalink: "/art/"
 		{% include fonts.html %}
 		{% include ga.html %}
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
+
 	</head>
 	<body class="bg-art">
         <div class="page-container">
@@ -26,7 +29,30 @@ permalink: "/art/"
             </div>
             
             <div class='content-container'>
-                Body content
+				<p>
+					Here is a small sample of some of my art. 
+				</p>
+				
+				<div class="galleria">
+					
+				</div>
+				<script>
+					var data = {% include imageList.json %};
+					(function() { 
+						Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.classic.min.js');
+						Galleria.run('.galleria', {
+							dataSource: data,
+						});
+						Galleria.ready(function() {
+    						var gallery = this;
+    						this.bind('image', function(e) {
+       							$(e.imageTarget).unbind('click').click(function() {
+            						gallery.toggleFullscreen();
+        						});
+    						});
+						});
+					}());
+				</script>
             </div>
 
             <div class="footer">

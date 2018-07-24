@@ -4,9 +4,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta content="Proteomics? What in the world is that!?" property="og:title"/>
 	<meta content="What is proteomics? Proteomics on a very basic level is the study of what proteins are made in a cell. How proteomics works can be a tricky subject to understand, so what better way to make sense of it than with a Lego analogy!" property="og:description"/>
-	<meta content="http://localhost:4000/blog/what-in-the-world-is-proteomics/" property="og:url"/>	
+	<meta content="https://emptyport.github.io/blog/what-in-the-world-is-proteomics/" property="og:url"/>	
 	<link rel="stylesheet" href="/css/blog.css">
-	<script src="/js/blog.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />		
+
+
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 	<title>Proteomics? What in the world is that!?</title>
 	<script>
@@ -181,15 +183,23 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
   });
 </script> 
 
-<body>
-	<div class="my-nav">
-		<a href="/blog"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></a>
+<body class="bg-blog">
+	<div class="nav-container">
+		<a href='/' class='tablink tab-home' id='tab-home'>Home</a>
+<a href='/blog' class='tablink tab-blog' id='tab-blog'>Blog</a>
+<a href='/bioinformatics' class='tablink tab-bioinformatics' id='tab-bioinformatics'>Bioinformatics</a>
+<a href='/art' class='tablink tab-art' id='tab-art'>Art</a>
+<a href='/projects' class='tablink tab-projects' id='tab-projects'>Projects</a>
+
 	</div>
-	<div class="container">
-		<article>
-			<h1><a href="/blog/what-in-the-world-is-proteomics/">Proteomics? What in the world is that!?</a></h1>
-			<p>28 Jul 2017</p>
-			<p><p>One of the fields I am interested in is that of proteomics. The problem with that is that the average person probably has never heard that word in their life, so I usually tell people that I study proteins. While this certainly avoids a lot of confusion, saying that I study proteins is still a pretty vague answer. This post is designed to be an introduction to proteomics that anyone (including your grandma) can understand.</p>
+
+	
+	<div class="content-container">
+		<div class="blog-article">
+			<article>
+				<h1><a href="/blog/what-in-the-world-is-proteomics/">Proteomics? What in the world is that!?</a></h1>
+				<p>28 Jul 2017</p>
+				<p><p>One of the fields I am interested in is that of proteomics. The problem with that is that the average person probably has never heard that word in their life, so I usually tell people that I study proteins. While this certainly avoids a lot of confusion, saying that I study proteins is still a pretty vague answer. This post is designed to be an introduction to proteomics that anyone (including your grandma) can understand.</p>
 
 <p>So what is proteomics? Proteomics is a cousin to genomics, which is something you may have heard of before. Genomics deals with figuring out what the genetic code of somebody/something is. Essentially genomics is figuring out what DNA is in your body. Your genetic code acts as the blueprint that all your body’s cells use when making proteins. If you think of the DNA as the instructions to a Lego set, you can think of the proteins as the Lego creation itself. The DNA dictates which proteins should be made. Proteomics deals with figuring out what proteins are actually being made in your body. This sounds like a fairly simple task, but each organ in your body makes varying amounts of protein, and cells will often make special modifications to proteins. The goal of proteomics is to decode all that information so that we have a better understanding of how cells work and so that we can develop better drugs to fight disease.</p>
 
@@ -224,10 +234,13 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
 
 <p>If you’ve made it to the end of this post, I want to thank you for reading and I hope your understanding of proteomics is a little better than it was before you got here.</p>
 </p>
-		</article>
+			</article>
+		</div>
+		<br />
 	</div>
-</body>
-  <span><a href="/privacy">Privacy</a></span>
+	
+	<div class="footer">
+		<span><a href="/privacy">Privacy</a></span>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
@@ -246,5 +259,13 @@ window.cookieconsent.initialise({
   "position": "bottom-right"
 })});
 </script>
+	</div>
+</body>
+
+<script>
+	var homeTab = document.getElementById('tab-blog');
+	homeTab.classList.add('bg-blog');
+</script>
+
 
 </html>

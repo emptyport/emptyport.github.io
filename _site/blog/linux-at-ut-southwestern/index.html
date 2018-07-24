@@ -4,9 +4,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta content="Using Linux at UT Southwestern" property="og:title"/>
 	<meta content="How to setup Linux and apt to be able to install software through the UT Southwestern proxy" property="og:description"/>
-	<meta content="http://localhost:4000/blog/linux-at-ut-southwestern/" property="og:url"/>	
+	<meta content="https://emptyport.github.io/blog/linux-at-ut-southwestern/" property="og:url"/>	
 	<link rel="stylesheet" href="/css/blog.css">
-	<script src="/js/blog.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />		
+
+
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 	<title>Using Linux at UT Southwestern</title>
 	<script>
@@ -181,15 +183,23 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
   });
 </script> 
 
-<body>
-	<div class="my-nav">
-		<a href="/blog"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></a>
+<body class="bg-blog">
+	<div class="nav-container">
+		<a href='/' class='tablink tab-home' id='tab-home'>Home</a>
+<a href='/blog' class='tablink tab-blog' id='tab-blog'>Blog</a>
+<a href='/bioinformatics' class='tablink tab-bioinformatics' id='tab-bioinformatics'>Bioinformatics</a>
+<a href='/art' class='tablink tab-art' id='tab-art'>Art</a>
+<a href='/projects' class='tablink tab-projects' id='tab-projects'>Projects</a>
+
 	</div>
-	<div class="container">
-		<article>
-			<h1><a href="/blog/linux-at-ut-southwestern/">Using Linux at UT Southwestern</a></h1>
-			<p>20 Jul 2017</p>
-			<p><p>I recently made a complete switch to Linux. I’d been dual booting Windows 10 and Ubuntu before, but I decided to start fresh before I started my PhD program. I am now running solely <a href="https://elementary.io/">elementary OS</a> (no more Windows) and I have to say I am quite pleased so far.</p>
+
+	
+	<div class="content-container">
+		<div class="blog-article">
+			<article>
+				<h1><a href="/blog/linux-at-ut-southwestern/">Using Linux at UT Southwestern</a></h1>
+				<p>20 Jul 2017</p>
+				<p><p>I recently made a complete switch to Linux. I’d been dual booting Windows 10 and Ubuntu before, but I decided to start fresh before I started my PhD program. I am now running solely <a href="https://elementary.io/">elementary OS</a> (no more Windows) and I have to say I am quite pleased so far.</p>
 
 <p>However, there was a small hiccup with my transition to 100% Linux and that has to do with my school’s wifi. Since I am a student, I have to sign in to their wifi with my student credentials and use a proxy server if I want to connect outside of UT Southwestern’s intranet. I followed their instructions for Android (so I could get the proxy host and port) and I had no problem connecting to outside websites. Unfortunately, if I wanted to install anything with apt-get or the app center, my laptop couldn’t connect to the software repositories. I wouldn’t say installing new programs is something I do routinely, but since this is a fresh install I have been installing quite a few applications lately.</p>
 
@@ -209,10 +219,13 @@ Acquire::https::proxy "http://user:pass@{server}:{port}";
 <p>Once you disconnect from the proxy (like when you get back home), you have to comment out the two lines in <code class="highlighter-rouge">/etc/apt/apt.conf</code> with a <code class="highlighter-rouge">#</code>. Otherwise, apt and the app center will try to connect through a proxy that is no longer there.</p>
 
 </p>
-		</article>
+			</article>
+		</div>
+		<br />
 	</div>
-</body>
-  <span><a href="/privacy">Privacy</a></span>
+	
+	<div class="footer">
+		<span><a href="/privacy">Privacy</a></span>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
@@ -231,5 +244,13 @@ window.cookieconsent.initialise({
   "position": "bottom-right"
 })});
 </script>
+	</div>
+</body>
+
+<script>
+	var homeTab = document.getElementById('tab-blog');
+	homeTab.classList.add('bg-blog');
+</script>
+
 
 </html>

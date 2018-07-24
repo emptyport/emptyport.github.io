@@ -4,9 +4,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta content="Coloring Protein Surfaces in Blender" property="og:title"/>
 	<meta content="Chimera is a great tool for visualizing protein structures, and Blender is a great tool for creating animations. This tutorial goes over how to export a protein structure from Chimera and then import it into Blender for animation. The key here is to keep the color data from Chimera and be able to use it in Blender." property="og:description"/>
-	<meta content="http://localhost:4000/blog/colored-protein-surfaces-blender/" property="og:url"/>	
+	<meta content="https://emptyport.github.io/blog/colored-protein-surfaces-blender/" property="og:url"/>	
 	<link rel="stylesheet" href="/css/blog.css">
-	<script src="/js/blog.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />		
+
+
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 	<title>Coloring Protein Surfaces in Blender</title>
 	<script>
@@ -181,15 +183,23 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
   });
 </script> 
 
-<body>
-	<div class="my-nav">
-		<a href="/blog"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></a>
+<body class="bg-blog">
+	<div class="nav-container">
+		<a href='/' class='tablink tab-home' id='tab-home'>Home</a>
+<a href='/blog' class='tablink tab-blog' id='tab-blog'>Blog</a>
+<a href='/bioinformatics' class='tablink tab-bioinformatics' id='tab-bioinformatics'>Bioinformatics</a>
+<a href='/art' class='tablink tab-art' id='tab-art'>Art</a>
+<a href='/projects' class='tablink tab-projects' id='tab-projects'>Projects</a>
+
 	</div>
-	<div class="container">
-		<article>
-			<h1><a href="/blog/colored-protein-surfaces-blender/">Coloring Protein Surfaces in Blender</a></h1>
-			<p>24 Aug 2017</p>
-			<p><p><img src="/images/protein_internal.gif" alt="Colored protein surface" /></p>
+
+	
+	<div class="content-container">
+		<div class="blog-article">
+			<article>
+				<h1><a href="/blog/colored-protein-surfaces-blender/">Coloring Protein Surfaces in Blender</a></h1>
+				<p>24 Aug 2017</p>
+				<p><p><img src="/images/protein_internal.gif" alt="Colored protein surface" /></p>
 
 <p>As I start my PhD and get back into biochemistry, I’m also getting back into animation. Animation is a great way to visual how proteins function because proteins are three dimensional molecules that interact in three dimensions. <a href="https://www.cgl.ucsf.edu/chimera/">UCSF Chimera</a> is an excellent tool for viwing protein structures and is <a href="https://pdb101.rcsb.org/events/video-challenge/tutorial-1">capable of producing animations</a>. However, if you’ve ever seen the <a href="https://www.youtube.com/watch?v=wJyUtbn0O5Y">Inner Life of a Cell video</a>, you’ll probably want to go for software that is more geared towards animation. My software of choice is <a href="https://www.blender.org/">Blender</a>. Chimera is probably sufficient for the vast majority of small, simple animations, but you’ll definitely want to make a switch over to Blender if you plan on making a more complicated animation.</p>
 
@@ -217,10 +227,13 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
 
 <p>Go ahead and setup your scene how you’d like and make something cool!</p>
 </p>
-		</article>
+			</article>
+		</div>
+		<br />
 	</div>
-</body>
-  <span><a href="/privacy">Privacy</a></span>
+	
+	<div class="footer">
+		<span><a href="/privacy">Privacy</a></span>
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
@@ -239,5 +252,13 @@ window.cookieconsent.initialise({
   "position": "bottom-right"
 })});
 </script>
+	</div>
+</body>
+
+<script>
+	var homeTab = document.getElementById('tab-blog');
+	homeTab.classList.add('bg-blog');
+</script>
+
 
 </html>

@@ -18,6 +18,11 @@ body {
     flex-direction: column;
 }
 
+.galleria {
+    width: 100%;
+    height: 800px;
+}
+
 .page-container {
     display: flex;
     flex-flow: column;
@@ -31,7 +36,7 @@ body {
 }
 
 .content-container {
-    margin: 12%;
+    margin: 10%;
     text-align: center;
     font-size: 5vw;
     flex: 1 1 auto;
@@ -138,7 +143,7 @@ body {
     }
 
     .content-container {
-        font-size: 3vw;
+        font-size: 2.5vw;
         margin: 5%;
     }
 }
