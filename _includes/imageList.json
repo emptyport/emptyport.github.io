@@ -1,0 +1,22 @@
+[
+    { 
+        "image": "{{ site.base_url }}/images/lizard.jpg",
+        "title": "Green lizard",
+        "description": "A friendly lizard I found in the backyard"
+    },
+    { 
+        "image": "{{ site.base_url }}/images/wolf-spider.jpg",
+        "title": "Wolf spider",
+        "description": "I found this male wolf spider wandering around in Fillmore, UT"
+    },
+    { 
+        "image": "{{ site.base_url }}/images/fillmore-sunset.jpg",
+        "title": "Sunset in Fillmore, UT",
+        "description": "An attempt at a high dynamic range picture of the sunset"
+    },
+    { 
+        "image": "{{ site.base_url }}/images/art/nav_channel.png",
+        "title": "Sodium gated voltage channel",
+        "description": "A rendering of a sodium gated voltage channel using a model from PDB and Blender"
+    }
+]

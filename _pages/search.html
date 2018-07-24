@@ -5,16 +5,17 @@ permalink: "/search/"
 <head>
   <title>Search</title>
   <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />    
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/css/blog.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />		
+
   {% include ga.html %}
 </head>
 
 {% include icons.html %}
 {% include fonts.html %}
 
-<style>
-  {% include css/search.css %}
-</style>
+
 
 <script>
   {% include js/lunr.js %}
@@ -50,20 +51,20 @@ permalink: "/search/"
   }
 
   function displaySearchResults(results, store) {
-    var searchResults = document.getElementById('search-results');
+    var searchResults = document.getElementById('blog-list');
 
     if (results.length) { // Are there any results?
       var appendString = '';
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        appendString += '<p>' + item.summary + '...</p></li>';
+        appendString += '<article><h1><a href="' + item.url + '">' + item.title + '</a></h1>';
+        appendString += '<p>' + item.summary + '...</p></article>';
       }
 
       searchResults.innerHTML = appendString;
     } else {
-      searchResults.innerHTML = '<li>No results found</li>';
+      searchResults.innerHTML = 'No results found';
     }
   }
 
@@ -98,7 +99,29 @@ permalink: "/search/"
   
 </script>
 
-<a href="/blog"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></a>
-<br />
+<body class="bg-blog">
+    <div class="page-container">
+        <div class="nav-container">
+            {% include nav.html %}
+        </div>
+        
+        <div class='content-container'>
+            <div class="search-div">
+              <form action="{{ site.base_url }}/search" method="get" class="search-form">
+                <input type="text" id="search-box" name="query" placeholder="Search">
+                <input type="submit" value="Go!">
+              </form>
+            </div>
+            <div id='blog-list' class="blog-list"></div>
+        </div>
 
-<div id='search-results'></div>
+        <div class="footer">
+            {% include footer.html %}
+        </div>
+    </div>	
+</body>
+
+<script>
+var homeTab = document.getElementById('tab-blog');
+homeTab.classList.add('bg-blog');
+</script>

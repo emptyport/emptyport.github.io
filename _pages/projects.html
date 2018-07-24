@@ -1,0 +1,44 @@
+---
+permalink: "/projects/"
+---
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+
+		<title>Projects</title>
+
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />		
+		
+		{% include icons.html %}
+		{% include fonts.html %}
+		{% include ga.html %}
+
+	</head>
+	<body class="bg-projects">
+        <div class="page-container">
+            <div class="nav-container">
+                {% include nav.html %}
+            </div>
+            
+            <div class='content-container'>
+                <p>
+					There's nothing here for now, but I plan on adding in some information about the various things I make. The majority of projects that will be featured here will most likely be electronics related.
+				</p>
+            </div>
+
+            <div class="footer">
+                {% include footer.html %}
+            </div>
+        </div>	
+    </body>
+
+	<script>
+		var homeTab = document.getElementById('tab-projects');
+		homeTab.classList.add('bg-projects');
+	</script>
+</html>

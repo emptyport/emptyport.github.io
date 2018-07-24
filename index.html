@@ -11,43 +11,54 @@
 
 		<title>Michael Porter</title>
 
-		<style>
-			{% include css/index.css %}
-		</style>
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />		
 		
 		{% include icons.html %}
 		{% include fonts.html %}
 		{% include ga.html %}
 
 	</head>
-	<body>
+	<body class='bg-home'>
+		<div class="page-container">
+			<div class="nav-container">
+				{% include nav.html %}
+			</div>
+			
+			<div class='content-container'>
+				<h2>
+					Hey!
+				</h2>
 
-		<div class='container'>
-			<div class='list-item list-item-one'>
-				<a href='/about'><svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg><br/>About</a>
-			</div>
-			<div class='list-item list-item-two'>
-				<a href='/science'><svg class="icon icon-flask"><use xlink:href="#icon-flask"></use></svg><br/>Science</a>
-			</div>
-			<div class='list-item list-item-three'>
-				<a href='/programming'><svg class="icon icon-laptop"><use xlink:href="#icon-laptop"></use></svg><br/>Programming</a>
-			</div>
-			<div class='list-item list-item-four'>
-				<a href='/art'><svg class="icon icon-brush"><use 
-					xlink:href="#icon-brush"></use></svg><br/>Art</a>
-			</div>
-			<div class='list-item list-item-five'>
-				<a href='/photography'><svg class="icon icon-camera"><use xlink:href="#icon-camera"></use></svg><br/>Photography</a>
-			</div>
-			<div class='list-item list-item-six'>
-				<a href='/blog'><svg class="icon icon-book"><use xlink:href="#icon-book"></use></svg><br/>Blog</a>
-			</div>
-		</div>
+				<h3>
+					Welcome to my website!
+				</h3>
 
+				<p>
+					I'm a scientist who likes to program.
+				</p>
+
+				<p>
+					Take a look around and feel free to connect with me on social media!
+				</p>
+
+				<div class="social">
+					<a href="https://github.com/emptyport" target="_blank"><svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg></a>
+					<a href="https://www.linkedin.com/in/mtporter/" target="_blank"><svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg></a>
+					<a href="https://twitter.com/MikeTheBiochem" target="_blank"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+				</div>
+				
+			</div>
+
+			<div class="footer">
+				{% include footer.html %}
+			</div>
+		</div>	
 	</body>
 
-	<footer>
-  {% include footer.html %}
+		
 
-	</footer>
+	<script>
+		var homeTab = document.getElementById('tab-home');
+		homeTab.classList.add('bg-home');
+	</script>
 </html>

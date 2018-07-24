@@ -1,0 +1,149 @@
+---
+---
+
+$home-color: #CF3721;
+$blog-color: #b67fbb;
+$bioinformatics-color: #31A9B8;
+$art-color: #F5BE41;
+$projects-color: #258039;
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.galleria {
+    width: 100%;
+    height: 800px;
+}
+
+.page-container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.content-container {
+    margin: 10%;
+    text-align: center;
+    font-size: 5vw;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    flex: 0 1 auto;
+    position: fixed;
+    bottom: 0;
+    font-size: 10px;
+    float:right;
+}
+
+.social a{
+    color: white;
+    padding: 5px;
+}
+
+.search-div {
+    flex: 0 0 auto;
+}
+.search-form {
+    margin-right: 2%;
+    margin-bottom: 5px;
+    float: right;
+}
+
+.blog-list {
+    color: black;
+    background-color: white;
+    text-align: left;
+    font-size: 2vw;
+    flex: 1 1 auto;
+}
+
+.tablink {
+    color: black;
+    background: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 3vw;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
+}
+
+.tablink:hover {
+    color: white;
+}
+
+.tab-home:hover {
+    background: $home-color;
+}
+
+.tab-blog:hover {
+    background: $blog-color;
+}
+
+.tab-bioinformatics:hover {
+ background: $bioinformatics-color;
+}
+
+.tab-art:hover {
+    background: $art-color;
+}
+
+.tab-projects:hover {
+    background: $projects-color;
+}
+
+.bg-home {
+    background: $home-color;
+    color: white;
+}
+
+.bg-blog {
+    background: $blog-color;
+    color: white;
+}
+
+.bg-bioinformatics {
+    background: $bioinformatics-color;
+    color: white;
+}
+
+.bg-art {
+    background: $art-color;
+    color: white;
+}
+
+.bg-projects {
+    background: $projects-color;
+    color: white;
+}
+
+@media screen and (min-width: 600px) {
+    .tablink {
+        font-size: 2vw;
+    }
+
+    .content-container {
+        font-size: 2.5vw;
+        margin: 5%;
+    }
+}

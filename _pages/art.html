@@ -1,39 +1,68 @@
 ---
 permalink: "/art/"
 ---
+
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Art</title>
-    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />    
-    {% include ga.html %}
-  </head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 
-  {% include icons.html %}
-  {% include fonts.html %}
-  
-  <style>
-    {% include css/art.css %}
-  </style>
+		<title>Art</title>
 
-  <header>
-  </header>
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />		
+		
+		{% include icons.html %}
+		{% include fonts.html %}
+		{% include ga.html %}
 
-  <body>
-    <a href="/"><svg class="icon icon-home"><use xlink:href="#icon-home"></use></svg></a>
-    <br />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
 
-    <br />
-    <br />
+	</head>
+	<body class="bg-art">
+        <div class="page-container">
+            <div class="nav-container">
+                {% include nav.html %}
+            </div>
+            
+            <div class='content-container'>
+				<p>
+					Here is a small sample of some of my art. 
+				</p>
+				
+				<div class="galleria">
+					
+				</div>
+				<script>
+					var data = {% include imageList.json %};
+					(function() { 
+						Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.classic.min.js');
+						Galleria.run('.galleria', {
+							dataSource: data,
+						});
+						Galleria.ready(function() {
+    						var gallery = this;
+    						this.bind('image', function(e) {
+       							$(e.imageTarget).unbind('click').click(function() {
+            						gallery.toggleFullscreen();
+        						});
+    						});
+						});
+					}());
+				</script>
+            </div>
 
-    My tools of choice for scientific visualization are <a href="https://www.cgl.ucsf.edu/chimera/">UCSF Chimera</a> to clean up the protein structures and then <a href="https://www.blender.org/">Blender</a> for the rendering.
+            <div class="footer">
+                {% include footer.html %}
+            </div>
+        </div>	
+    </body>
 
-    <br />
-    <br />
-
-    <img src="/images/art/nav_channel.png" alt="Voltage gated sodium channel"/>
-
-  </body>
-    {% include footer.html %}
-
+	<script>
+		var homeTab = document.getElementById('tab-art');
+		homeTab.classList.add('bg-art');
+	</script>
 </html>

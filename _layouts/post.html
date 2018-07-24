@@ -9,7 +9,9 @@
 	<meta content="{{ page.description }}" property="og:description"/>
 	<meta content="{{ site.url }}{{ page.url }}" property="og:url"/>	
 	<link rel="stylesheet" href="/css/blog.css">
-	<script src="/js/blog.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />		
+
+
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 	<title>{{ page.title }}</title>
 	{% include ga.html %}
@@ -18,18 +20,32 @@
 {% include icons.html %}
 {% include fonts.html %}
 
-<body>
-	<div class="my-nav">
-		<a href="/blog"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></a>
+<body class="bg-blog">
+	<div class="nav-container">
+		{% include nav.html %}
 	</div>
-	<div class="container">
-		<article>
-			<h1><a href="{{ site.base_url }}{{ page.url }}">{{ page.title }}</a></h1>
-			<p>{{ page.date | date_to_string }}</p>
-			<p>{{ content }}</p>
-		</article>
+
+	
+	<div class="content-container">
+		<div class="blog-article">
+			<article>
+				<h1><a href="{{ site.base_url }}{{ page.url }}">{{ page.title }}</a></h1>
+				<p>{{ page.date | date_to_string }}</p>
+				<p>{{ content }}</p>
+			</article>
+		</div>
+		<br />
+	</div>
+	
+	<div class="footer">
+		{% include footer.html %}
 	</div>
 </body>
-  {% include footer.html %}
+
+<script>
+	var homeTab = document.getElementById('tab-blog');
+	homeTab.classList.add('bg-blog');
+</script>
+
 
 </html>

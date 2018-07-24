@@ -1,0 +1,48 @@
+img {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  height: auto;
+}
+
+article {
+  margin: 5%;
+}
+
+article h1 {
+  width: 100%;
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  margin-bottom: 5px;
+}
+
+article h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.blog-article {
+  background: white;
+  color: black;
+  text-align: left;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .icon {
+    font-size: 3em;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .blog-article {
+    font-size: 0.8em;
+  }
+  article {
+    margin: 5px;
+  }
+  iframe {
+    width: 300px;
+    height: auto;
+  }
+}
