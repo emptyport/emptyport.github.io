@@ -7,3 +7,4 @@ build:
 
 build-local:
 	jekyll build --destination ./build
+	mv ./build/* ../
