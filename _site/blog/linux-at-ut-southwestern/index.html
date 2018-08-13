@@ -2,15 +2,15 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta content="Coloring Protein Surfaces in Blender" property="og:title"/>
-	<meta content="Chimera is a great tool for visualizing protein structures, and Blender is a great tool for creating animations. This tutorial goes over how to export a protein structure from Chimera and then import it into Blender for animation. The key here is to keep the color data from Chimera and be able to use it in Blender." property="og:description"/>
-	<meta content="https://emptyport.github.io/blog/colored-protein-surfaces-blender/" property="og:url"/>	
+	<meta content="Using Linux at UT Southwestern" property="og:title"/>
+	<meta content="How to setup Linux and apt to be able to install software through the UT Southwestern proxy" property="og:description"/>
+	<meta content="http://localhost:4000/blog/linux-at-ut-southwestern/" property="og:url"/>	
 	<link rel="stylesheet" href="/css/blog.css">
 	<link rel="stylesheet" type="text/css" href="/css/main.css" />		
 
 
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
-	<title>Coloring Protein Surfaces in Blender</title>
+	<title>Using Linux at UT Southwestern</title>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -197,35 +197,27 @@ g,0<d.length&&(d=Aa[d[0]])&&(a.c[e]=d))}a.c[e]||(d=Aa[e])&&(a.c[e]=d);for(d=0;d<
 	<div class="content-container">
 		<div class="blog-article">
 			<article>
-				<h1><a href="/blog/colored-protein-surfaces-blender/">Coloring Protein Surfaces in Blender</a></h1>
-				<p>24 Aug 2017</p>
-				<p><p><img src="/images/protein_internal.gif" alt="Colored protein surface" /></p>
+				<h1><a href="/blog/linux-at-ut-southwestern/">Using Linux at UT Southwestern</a></h1>
+				<p>20 Jul 2017</p>
+				<p><p>I recently made a complete switch to Linux. I’d been dual booting Windows 10 and Ubuntu before, but I decided to start fresh before I started my PhD program. I am now running solely <a href="https://elementary.io/">elementary OS</a> (no more Windows) and I have to say I am quite pleased so far.</p>
 
-<p>As I start my PhD and get back into biochemistry, I’m also getting back into animation. Animation is a great way to visual how proteins function because proteins are three dimensional molecules that interact in three dimensions. <a href="https://www.cgl.ucsf.edu/chimera/">UCSF Chimera</a> is an excellent tool for viwing protein structures and is <a href="https://pdb101.rcsb.org/events/video-challenge/tutorial-1">capable of producing animations</a>. However, if you’ve ever seen the <a href="https://www.youtube.com/watch?v=wJyUtbn0O5Y">Inner Life of a Cell video</a>, you’ll probably want to go for software that is more geared towards animation. My software of choice is <a href="https://www.blender.org/">Blender</a>. Chimera is probably sufficient for the vast majority of small, simple animations, but you’ll definitely want to make a switch over to Blender if you plan on making a more complicated animation.</p>
+<p>However, there was a small hiccup with my transition to 100% Linux and that has to do with my school’s wifi. Since I am a student, I have to sign in to their wifi with my student credentials and use a proxy server if I want to connect outside of UT Southwestern’s intranet. I followed their instructions for Android (so I could get the proxy host and port) and I had no problem connecting to outside websites. Unfortunately, if I wanted to install anything with apt-get or the app center, my laptop couldn’t connect to the software repositories. I wouldn’t say installing new programs is something I do routinely, but since this is a fresh install I have been installing quite a few applications lately.</p>
 
-<p>One of the hurdles I ran into as I got started with Chimera and Blender was how to get a protein surface into Blender and keep the color information. This isn’t a problem if the protein molecule is going to be a single color, but if you want to show any sort of surface coloring such as hydrophobicity or electrostatic potential, you need to be sure to export that information from Chimera and be able to use it in Blender. Fortunately, the process is quite simple.</p>
+<p>For a few days I just put up with it and waited until I got home to install new software, but I got sick of waiting until I got home so I decided to just go ahead and figure out how to make apt work with the proxy. After a little googling I discovered a simple solution.</p>
 
-<p>For this example, I am using the <a href="https://www.rcsb.org/pdb/explore/explore.do?structureId=1bcg">Scorpion toxin BJXTR-IT</a> protein structure from PDB. Your first order of business will be to download the .pdb file and open it in Chimera.</p>
+<p>To solve my connection issue, I created the following file <code class="highlighter-rouge">/etc/apt/apt.conf</code> and added the following lines to it:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Acquire::http::proxy "http://user:pass@{server}:{port}";
+Acquire::https::proxy "http://user:pass@{server}:{port}";
+</code></pre>
+</div>
+<p>The {server} and {port} have been replaced by my school’s proxy servers host and port. Since my school username and password are required as part of connecting to the wifi, I did not have to place those in the file; the lines really do read “user:pass” before the @ symbol. If I had needed to put my actual username and password here for it to work, I’m not sure that I would have done it since this file is just stored as plain text.</p>
 
-<p>Once I opened my structure in Chimera, I went to the Actions menu and hid the ribbon structure because I want to show the protein surface. Technically you can leave the ribbon structure because it will be hidden under the surface, but when you import the file into Blender you are going to end up with both the ribbon and the surface. After hiding the ribbon structure, I went back to the Actions menu and showed the surface.</p>
+<p>Hopefully this simple solution will be useful to anyone using Linux in a Windows and macOS world.</p>
 
-<p>You can color your protein surface however you desire, but for this example I am going to go to the Tools menu and select Coulombic Surface Coloring from the Surface/Binding Analysis submenu. The Coulombic surface coloring will color your protein surface according to its electrostatic potential. There are more accurate tools for doing this, but this option does a pretty good job and is quick and easy to use.</p>
+<p>–Edit–</p>
 
-<p>Now that I’ve colored my protein surface, I am going to open up the File menu and then select the Export Scene option. Choose a filename and location and then select X3D as the filetype. Click on save and then go ahead and open up Blender.</p>
+<p>Once you disconnect from the proxy (like when you get back home), you have to comment out the two lines in <code class="highlighter-rouge">/etc/apt/apt.conf</code> with a <code class="highlighter-rouge">#</code>. Otherwise, apt and the app center will try to connect through a proxy that is no longer there.</p>
 
-<p>Once you are in Blender, go ahead and delete the cube from the default scene. I’m going to go ahead and leave the camera and lamp. Now go to File, Import, and then select X3D Extensible 3D and then find the file you just saved from Chimera. This will import a rather large protein surface and possibly some lights. Go ahead and delete the extra lights, scale down your protein, and select smooth shading. My protein’s origin is also offset so I also set the geometry to origin.</p>
-
-<p>Go ahead and give your scene a quick render. If you don’t see any color on the protein surface, not to worry, we are now going to take care of that. The process is a little different depending on if you’re using the internal renderer or Cycles, so I’ll cover both.</p>
-
-<h4 id="blender-internal">Blender Internal</h4>
-<p>If you plan on using the internal renderer, open up the Materials for your protein. Go down to the options and make sure the “Vertex Color Paint” option is checked. Now re-render your protein and you should see some color!</p>
-
-<h4 id="cycles">Cycles</h4>
-<p>If you plan on using Cycles, open up the Node editor and create a node for your protein’s material. Create a new node and select “Attribute” from the Input submenu. In the name of the Attribute node put “Col” and connect its color to the color of the material node you are using. Give things a render to make sure the colors are showing up and you are good to go!</p>
-
-<p><img src="/images/node_setup_protein.jpeg" alt="Node setup" /></p>
-
-<p>Go ahead and setup your scene how you’d like and make something cool!</p>
 </p>
 			</article>
 		</div>
