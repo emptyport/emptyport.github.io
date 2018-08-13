@@ -8,3 +8,6 @@ build:
 build-local:
 	jekyll build --destination ./build
 	mv ./build/* ../
+
+clean:
+	rm -rf ../!(src)

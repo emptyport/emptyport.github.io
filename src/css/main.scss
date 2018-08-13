@@ -10,7 +10,7 @@ $projects-color: #258039;
 body, html {
     height: 100%;
     margin: 0;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -70,7 +70,6 @@ body {
     color: black;
     background-color: white;
     text-align: left;
-    font-size: 2vw;
     flex: 1 1 auto;
 }
 
@@ -137,6 +136,10 @@ body {
     color: white;
 }
 
+.article {
+    padding: 10px;
+}
+
 @media screen and (min-width: 600px) {
     .tablink {
         font-size: 2vw;
@@ -145,5 +148,10 @@ body {
     .content-container {
         font-size: 2.5vw;
         margin: 5%;
+    }
+
+    .article {
+        margin: 5%;
+        padding: 10px;
     }
 }

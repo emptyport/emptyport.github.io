@@ -1,7 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
-  font-family: 'Ubuntu', sans-serif; }
+  font-family: 'Nunito', sans-serif; }
 
 body {
   display: flex;
@@ -52,7 +52,6 @@ body {
   color: black;
   background-color: white;
   text-align: left;
-  font-size: 2vw;
   flex: 1 1 auto; }
 
 .tablink {
@@ -106,10 +105,17 @@ body {
   background: #258039;
   color: white; }
 
+.article {
+  padding: 10px; }
+
 @media screen and (min-width: 600px) {
   .tablink {
     font-size: 2vw; }
 
   .content-container {
     font-size: 2.5vw;
-    margin: 5%; } }
+    margin: 5%; }
+
+  .article {
+    margin: 5%;
+    padding: 10px; } }
