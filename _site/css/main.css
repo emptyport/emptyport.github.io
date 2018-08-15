@@ -27,7 +27,7 @@ a {
 .content-container {
   margin: 10%;
   text-align: center;
-  font-size: 5vw;
+  font-size: 4vw;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column; }
@@ -155,7 +155,7 @@ a {
     font-size: 2vw; }
 
   .content-container {
-    font-size: 2.5vw;
+    font-size: 2vw;
     margin: 5%; }
 
   .article {
