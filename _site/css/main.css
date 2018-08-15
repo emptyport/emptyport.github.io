@@ -7,6 +7,9 @@ body {
   display: flex;
   flex-direction: column; }
 
+a {
+  color: inherit; }
+
 .galleria {
   width: 100%;
   height: 800px; }
@@ -76,7 +79,7 @@ body {
 .tab-blog:hover {
   background: #b67fbb; }
 
-.tab-bioinformatics:hover {
+.tab-programming:hover {
   background: #31A9B8; }
 
 .tab-art:hover {
@@ -93,7 +96,7 @@ body {
   background: #b67fbb;
   color: white; }
 
-.bg-bioinformatics {
+.bg-programming {
   background: #31A9B8;
   color: white; }
 
@@ -108,7 +111,46 @@ body {
 .article {
   padding: 10px; }
 
-@media screen and (min-width: 600px) {
+.project-description {
+  text-align: left; }
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%; }
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.project-div {
+  border-top: 3px solid #0b2812;
+  margin-top: 50px; }
+
+.left-align-p {
+  text-align: left; }
+
+#skills {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr; }
+
+.skill-list {
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 1%;
+  padding: 5px; }
+
+.icon {
+  font-size: 1.5em;
+  padding: 10px; }
+
+@media screen and (min-width: 750px) {
   .tablink {
     font-size: 2vw; }
 
@@ -118,4 +160,9 @@ body {
 
   .article {
     margin: 5%;
-    padding: 10px; } }
+    padding: 10px; }
+
+  #skills {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; } }

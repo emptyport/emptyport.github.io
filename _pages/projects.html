@@ -26,15 +26,40 @@ permalink: "/projects/"
             </div>
             
             <div class='content-container'>
-                <p>
-					There's nothing here for now, but I plan on adding in some information about the various things I make. The majority of projects that will be featured here will most likely be electronics related.
+                <p class="project-description">
+					I historically haven't kept good records of my projects, but I'm hoping to provide some build instructions for the next iteration of my lightshow. Previous versions have relied on manual setup of the light sequences, but I'm currently experimenting with <a href="https://aubio.org/" target="_blank">aubio</a> to extract information that I can then use to prgrammatically generate the sequences. Until then, feel free to take a look at some of the stuff I've made!
 				</p>
+
+				<!-- Responsive video embedding provided by http://embedresponsively.com/ -->
+				<div class="project-div">
+					<p class="project-description">This is a variation on Conway's Game of Life that I made with an Arduino. Each particular color can be thought of as a "colony" which has a finite lifespan and the ability to expand to adjacent areas. The simulation is driven by random numbers, but what I find most interesting is that, in spite of the randomness, a particular colony is able to arise, colonize a majority of the environment, and propogate for several generations.</p>
+					<div class='embed-container'><iframe src='https://www.youtube.com/embed/r6SHwMPfvp8' frameborder='0' allowfullscreen></iframe></div>
+				</div>
+
+				<div class="project-div">
+					<p class="project-description">This is my 2016 iteration of my light show. I only did one song because I set up the sequence using <a href="http://www.vixenlights.com/" target="_blank">Vixen Lights</a> which is quite tedious.</p>
+					<div class='embed-container'><iframe src='https://www.youtube.com/embed/2PG9EY0USFU' frameborder='0' allowfullscreen></iframe></div>
+				</div>
+
+				<div class="project-div">
+					<p class="project-description">This is my first light show made in 2015. I arranged the song using <a href="https://lmms.io/" target="_blank">LMMS</a> and set up the sequence using Vixen Lights. Both versions of my light show are running off of a single Arduino Uno. I am using some 74HC595 shift registers to be able to control all the LEDs.</p>
+					<div class='embed-container'><iframe src='https://www.youtube.com/embed/RjRXuG2WboI' frameborder='0' allowfullscreen></iframe></div>
+				</div>
+
+				<div class="project-div">
+					<p class="project-description">This is one of my earliest projects that I made back in high school (but I didn't post the video until later). It is a simple little coil gun.</p>
+					<div class='embed-container'><iframe src='https://www.youtube.com/embed/9h5VzbrPAdY' frameborder='0' allowfullscreen></iframe></div>
+				</div>
             </div>
 
             <div class="footer">
                 {% include footer.html %}
             </div>
-        </div>	
+		</div>	
+		
+		<script>
+			console.log("As far as I can tell, these X-XSS-Protection errors are on the part of YouTube and/or Chrome");
+		</script>
     </body>
 
 	<script>

@@ -3,7 +3,7 @@
 
 $home-color: #CF3721;
 $blog-color: #b67fbb;
-$bioinformatics-color: #31A9B8;
+$programming-color: #31A9B8;
 $art-color: #F5BE41;
 $projects-color: #258039;
 
@@ -16,6 +16,10 @@ body, html {
 body {
     display: flex;
     flex-direction: column;
+}
+
+a {
+    color: inherit;
 }
 
 .galleria {
@@ -99,8 +103,8 @@ body {
     background: $blog-color;
 }
 
-.tab-bioinformatics:hover {
- background: $bioinformatics-color;
+.tab-programming:hover {
+ background: $programming-color;
 }
 
 .tab-art:hover {
@@ -121,8 +125,8 @@ body {
     color: white;
 }
 
-.bg-bioinformatics {
-    background: $bioinformatics-color;
+.bg-programming {
+    background: $programming-color;
     color: white;
 }
 
@@ -140,7 +144,54 @@ body {
     padding: 10px;
 }
 
-@media screen and (min-width: 600px) {
+.project-description {
+    text-align: left;
+}
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+} 
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+
+.project-div {
+    border-top: 3px solid hsl(133, 55%, 10%);
+    margin-top: 50px;
+}
+
+.left-align-p {
+    text-align: left;
+}
+
+#skills {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.skill-list {
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 1%;
+    padding: 5px;
+}
+
+.icon {
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+@media screen and (min-width: 750px) {
     .tablink {
         font-size: 2vw;
     }
@@ -153,5 +204,11 @@ body {
     .article {
         margin: 5%;
         padding: 10px;
+    }
+
+    #skills {
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
