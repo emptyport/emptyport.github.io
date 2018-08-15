@@ -1,8 +1,13 @@
 <span><a href="/privacy">Privacy</a></span>
 
 <!-- The cookie consent portion comes from https://cookieconsent.insites.com/ -->
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js" defer></script>
+<style>
+  {% include css/cookieconsent.css %}
+</style>
+<script defer>
+  {% include js/cookieconsent.js %}
+</script>
+
 <script defer>
 window.addEventListener("load", function(){
 window.cookieconsent.initialise({
