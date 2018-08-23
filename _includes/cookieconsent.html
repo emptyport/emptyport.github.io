@@ -1,0 +1,23 @@
+<!-- The cookie consent portion comes from https://cookieconsent.insites.com/ -->
+<style>
+    {% include css/cookieconsent.css %}
+  </style>
+  <script src="/js/cookieconsent.js"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#252e39"
+      },
+      "button": {
+        "background": "#14a7d0"
+      }
+    },
+    "theme": "classic",
+    "position": "bottom-right",
+    "content": {
+      "message": "This website uses cookies so that I know how many people are visiting it"
+    }
+  })});
+  </script>
