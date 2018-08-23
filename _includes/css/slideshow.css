@@ -1,0 +1,37 @@
+.content-container {
+    color: black;
+}
+
+#slideshow {
+    width: 100%;
+}
+
+#slide-nav {
+    display: block;
+}
+
+#slide-title {
+    text-align: left;
+    font-weight: 900;
+}
+
+#slide-caption {
+    text-align: left;
+}
+
+.img-button {
+    border-radius: 50%;
+    background: none;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#slide-image {
+    display: inline-block;
+}
+
+.content-container {
+    box-sizing: border-box;
+}

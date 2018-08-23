@@ -13,7 +13,8 @@ permalink: "/art/"
 		<title>Art</title>
 
 		<link rel="stylesheet" type="text/css" href="/css/main.css" />		
-		
+		<style>{% include css/slideshow.css %}</style>
+
 		{% include icons.html %}
 		{% include fonts.html %}
 		{% include ga.html %}
@@ -26,13 +27,21 @@ permalink: "/art/"
             </div>
             
             <div class='content-container'>
-				<p>
-					Here is a small sample of some of my art, both photographic and 3d. 
-				</p>
 				
-				<div class="galleria">
-					
+				<div id="slideshow">
+						<img id="slide-image" src="">
+					<div id="slide-nav">
+						<button class="img-button" onclick="advanceSlideShow(-1)">
+							<
+						</button>
+						<button class="img-button" onclick="advanceSlideShow(1)">
+							>
+						</button>
+					</div>
+					<div id="slide-title"></div>
+					<div id="slide-caption"></div>
 				</div>
+					
 				
             </div>
 
@@ -42,27 +51,41 @@ permalink: "/art/"
 		</div>	
 		
 		<script>
-			{% include js/jquery-1.11.1.min.js %}
-		</script>
-		<script>
-			{% include js/galleria-1.5.7.min.js %}
-		</script>
-		<script>
 			var data = {% include imageList.json %};
-			(function() { 
-				Galleria.loadTheme('../js/galleria.classic.min.js');
-				Galleria.run('.galleria', {
-					dataSource: data,
-				});
-				Galleria.ready(function() {
-					var gallery = this;
-					this.bind('image', function(e) {
-							$(e.imageTarget).unbind('click').click(function() {
-							gallery.toggleFullscreen();
-						});
-					});
-				});
+			var curIdx = 0;
+			(function() {
+				let windowHeight = window.innerHeight;
+				let windowWidth = window.innerWidth;
+				let slideImage = document.getElementById("slide-image");
+				if(windowWidth > windowHeight) {
+					slideImage.height = windowHeight / 2;
+					slideImage.style.width = "auto";
+				}
+				else {
+					slideImage.width = windowWidth * 0.7;
+					slideImage.style.height = "auto";
+				}
+
+				document.getElementById("slide-title").innerHTML = data[curIdx].title;
+				document.getElementById("slide-caption").innerHTML = data[curIdx].description;
+				document.getElementById("slide-image").setAttribute("src", data[curIdx].image);
 			}());
+			
+			function advanceSlideShow(n) {
+				if(curIdx===0 && n===-1) {
+					curIdx = data.length - 1;
+				}
+				else if(curIdx===data.length-1 && n===1) {
+					curIdx = 0;
+				}
+				else {
+					curIdx += n;
+				}
+				document.getElementById("slide-title").innerHTML = data[curIdx].title;
+				document.getElementById("slide-caption").innerHTML = data[curIdx].description;
+				document.getElementById("slide-image").setAttribute("src", data[curIdx].image);
+			}
+
 		</script>
     </body>
 
