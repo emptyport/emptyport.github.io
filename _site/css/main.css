@@ -10,9 +10,15 @@ body {
 a {
   color: inherit; }
 
-.galleria {
-  width: 100%;
-  height: 800px; }
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+@media (max-width: 700px) {
+  #projects {
+    grid-template-columns: 1fr; } }
+.project-tile {
+  margin: 2%; }
 
 .page-container {
   display: flex;
